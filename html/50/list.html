@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      ol {
+        list-style-type: hebrew;
+      }
+
+      ul {
+        list-style-type: decimal-leading-zero;
+      }
+
+      .arrowList {
+        list-style-image: url(images/arrow.png);
+        margin-left: 1em;
+      }
+
+      .arrow {
+        vertical-align: middle;
+      }
+
+      .inline,
+      .inline li {
+        display: inline;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Things to do</h1>
+    <ol>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+      <li>four</li>
+    </ol>
+
+    <h1>Things to buy</h1>
+    <ul>
+      <li>Steak</li>
+      <li>Burger</li>
+      <li>Ketchup</li>
+      <li>Pickles</li>
+    </ul>
+
+    <h1>My List</h1>
+    <ul class="arrowList">
+      <li>Steak</li>
+      <li>Burger</li>
+      <li>Ketchup</li>
+      <li>Pickles</li>
+    </ul>
+
+    <h1>List that doesnt look like a list</h1>
+    before
+    <ul class="inline">
+      <li>Steak</li>
+      <li>Burger</li>
+      <li>Ketchup</li>
+      <li>Pickles</li>
+    </ul>
+    after
+
+    <img src="images/arrow.png" class="arrow"> <span>some text</span>
+  </body>
+
+</html>
