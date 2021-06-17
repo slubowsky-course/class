@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--link media="screen and (max-width: 999px)" rel="stylesheet" href="foo.css"-->
+    <style>
+      body {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      video {
+        width: 33.33%;
+        box-sizing: border-box;
+        padding: 1em;
+      }
+
+      @media screen and (max-width: 999px) {
+        video {
+          width: 100%;
+        }
+      }
+
+      @media print {
+        nav {
+          page-break-after: always;
+        }
+
+        video {
+          display: none;
+        }
+      }
+
+      /*video {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1em;
+      }
+
+      @media screen and (min-width: 1000px) {
+        video {
+          width: 33.33%;
+        }
+      }*/
+    </style>
+  </head>
+
+  <body>
+    <h1>Videos</h1>
+    <nav>
+      <ol>
+        <li>
+          <a href="#1">Java</a>
+          <ol>
+            <li><a href="#2">Part 1 of the Java section</a></li>
+            <li><a href="#3">Part 2</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="#4">HTML</a>
+          <ol>
+            <li><a href="#5">Part 1</a></li>
+            <li><a href="#6">Part 2</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="#7">JavaScript</a>
+          <ol>
+            <li><a href="#8">Part 1</a></li>
+            <li><a href="#9">Part 2</a></li>
+          </ol>
+        </li>
+      </ol>
+    </nav>
+    <video src="restaurant/media/El_Hanaar_Hazeh.mp4" controls></video><!--
+    --><video src="restaurant/media/El_Hanaar_Hazeh.mp4" controls></video><!--
+    --><video src="restaurant/media/El_Hanaar_Hazeh.mp4" controls></video><!--
+    --><video src="restaurant/media/El_Hanaar_Hazeh.mp4" controls></video><!--
+    --><video src="restaurant/media/El_Hanaar_Hazeh.mp4" controls></video><!--
+    --><video src="restaurant/media/El_Hanaar_Hazeh.mp4" controls></video><!--
+    --><video src="restaurant/media/El_Hanaar_Hazeh.mp4" controls></video><!--
+    --><video src="restaurant/media/El_Hanaar_Hazeh.mp4" controls></video><!--
+    --><video src="restaurant/media/El_Hanaar_Hazeh.mp4" controls></video>
+    after videos
+  </body>
+
+</html>

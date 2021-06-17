@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* universal selector - inefficent*/
+      * {
+        box-sizing: border-box;
+        font-size: 1.1em;
+      }
+
+      /* type selector */
+      section {
+        color: pink;
+      }
+
+      /* id selector */
+      #theOne {
+        font-weight: bold;
+      }
+
+      /* class selector */
+      .special {
+        border: 1px solid red;
+      }
+
+      /* multiple selectors separated by comma */
+      p,
+      .special {
+        font-style: italic;
+      }
+
+      /* and - section that has class special */
+      section.special {
+        text-decoration: line-through;
+      }
+
+      /* descendent selectors */
+      /* p inside a section */
+      section p {
+        font-size: 2em;
+      }
+
+      /* another example - anything in a section */
+      section * {
+        font-family: cursive;
+      }
+
+      /* immediate children only */
+      section>p {
+        color: green;
+      }
+
+      /* sibling selectors */
+      /* immediate - p that immediately follows a section*/
+      section+p {
+        margin-top: 5em;
+      }
+
+      /* even not immediate - p that follows a section*/
+      section~p {
+        transform: rotate(5deg);
+      }
+
+      /* pseudo elements */
+      .special::first-letter {
+        font-size: 2em;
+        font-family: cursive;
+        color: purple;
+      }
+
+      section::first-line {
+        text-decoration: underline;
+      }
+
+      /* pseudo classes */
+      section:hover {
+        background-color: yellow;
+      }
+
+      /* not */
+      section:not(.special) {
+        color: orange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="special">Selectors</h1>
+    <p>Im a p before any sections</p>
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima eius omnis amet fugit repellendus est
+      ducimus? Doloribus dolor ullam odit eaque repudiandae a hic?</section>
+    <section id="theOne">Eos rerum exercitationem et, impedit voluptatum voluptatem eaque asperiores quia dolorum quae
+      magnam quo
+      mollitia quod sunt ea doloremque qui, iure cupiditate ad neque earum?</section>
+    <section class="special">Nobis officiis deleniti repellendus quod ipsum. Magni explicabo veniam quaerat mollitia
+      deserunt alias nam
+      quibusdam quasi ad quas earum hic, nisi vel temporibus placeat quae.</section>
+    <section>Suscipit similique vitae, tenetur quidem distinctio autem aut nostrum consequuntur veniam placeat assumenda
+      voluptas? Dignissimos ab id libero dolorem officia vero tenetur illo officiis aspernatur?</section>
+    <section>Eius consectetur consequatur ipsa delectus, fuga quaerat ipsam iste provident tempora accusantium ex
+      dolorem. Blanditiis natus culpa repudiandae recusandae temporibus explicabo laboriosam placeat sint labore!
+      <p>Im a p in a section</p>
+      <div>
+        <p>Im a p grandchild of a section</p>
+      </div>
+    </section>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, magni illum a distinctio totam dolore non, et
+      reprehenderit tempora culpa dignissimos corrupti iure, nulla animi.</p>
+    <p>Im another p</p>
+  </body>
+
+</html>
