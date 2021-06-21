@@ -1,0 +1,11 @@
+
+
+              id      class    type
+#it           1      0         0       - 100
+.special      0      1         0       - 10
+p             0      0         1       - 1
+
+.special p    0      1         1       - 11
+#it p.special 1      1         1       - 111
+
+.one .two etc.. 0    15        0

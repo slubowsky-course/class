@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      /*border: 1px solid black;*/
+      border-collapse: collapse;
+    }
+
+    td, th {
+      /*border-top: 1px solid black;
+      border-bottom: 1px solid black;*/
+      border: 1px solid black;
+      padding: .5em 1em;
+    }
+
+    td {
+      text-align: right;
+    }
+
+    tfoot td {
+      color: red;
+    }
+
+    caption {
+      font-weight: bold;
+      font-style: italic;
+      caption-side: bottom;
+    }
+
+    tbody tr:hover {
+      background-color: lightskyblue !important;
+    }
+
+    /*.even {*/
+      /* 2 * 0, 2 * 1, 2 * 2, 2 * 3, etc.. */
+    /*tbody tr:nth-child(2n) {*/
+    /*  tbody tr:nth-child(odd) {*/
+    tbody tr:nth-child(2n+1) {
+      background-color: lightcyan;
+    }
+
+
+  </style>
+</head>
+<body>
+  <table>
+    <caption>PCS Students Attending</caption>
+    <thead>
+      <tr>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>4543</td>
+        <td>8675</td>
+        <td>6565</td>
+        <td>7978</td>
+        <td>4565</td>
+        <td>8987</td>
+        <td>3545</td>
+      </tr>
+      <tr>
+        <td>878</td>
+        <td>7877</td>
+        <td>8787</td>
+        <td>4534</td>
+        <td>8968</td>
+        <td>4324</td>
+        <td>6546</td>
+      </tr>
+      <tr>
+        <td>4543</td>
+        <td>8675</td>
+        <td>6565</td>
+        <td>7978</td>
+        <td>4565</td>
+        <td>8987</td>
+        <td>3545</td>
+      </tr>
+      <tr>
+        <td>878</td>
+        <td>7877</td>
+        <td>8787</td>
+        <td>4534</td>
+        <td>8968</td>
+        <td>4324</td>
+        <td>6546</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>4534543</td>
+        <td>5454676</td>
+        <td>7657345</td>
+        <td>435345</td>
+        <td>65645</td>
+        <td>65657</td>
+        <td>798685</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

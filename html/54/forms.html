@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        width: 80%;
+        margin: auto;
+      }
+
+      input:not([type="radio"]):not([type="checkbox"]), textarea {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 1em;
+      }
+
+      textarea {
+        height: 5em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="processForm.php" method="POST">
+      <label>First Name:
+        <input name="firstName" placeholder="Enter First Name">
+      </label>
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" name="lastName" value="Biden" placeholder="Enter Last Name" required>
+
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" minlength="3" maxlength="5" placeholder="Enter Password">
+
+      <label for="age">Age:</label>
+      <input type="number" name="age" id="age" min="1" max="120" step="any">
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email">
+
+      <label for="favoriteColor">Favorite Color:</label>
+      <input type="color" name="favoriteColor" id="favoriteColor" value="#c81414">
+
+      <!-- month, week -->
+      <label for="birthday">Birthday:</label>
+      <input type="date" name="birthday" id="birthday" value="2021-01-01" min="1900-01-01" max="2021-06-20">
+
+      <label for="phone">Phone:</label>
+      <input type="tel" name="phone" id="phone">
+
+      <label for="rating">Rating:</label>
+      <input type="range" name="rating" id="rating" min="1" max="5">
+
+      <label for="comments">Comments:</label>
+      <textarea name="comments" id="comments" placeholder="Enter comment here">This is a great restaurant</textarea>
+
+      <label>Should there be class next Monday:
+        <input type="radio" name="poll" value="yes">Yes
+        <input type="radio" name="poll" value="no" checked>No
+      </label>
+
+      <br>
+
+      <label for="side">Side:
+        <input type="checkbox" name="side" value="fries">Fries
+        <input type="checkbox" name="side" value="onionRings" checked>Onion Rings
+        <input type="checkbox" name="side" value="eggRoll">Egg Roll
+      </label>
+
+      <br>
+
+      <label for="drink">Drink:</label>
+      <select name="drink" id="drink">
+        <option value="1">Coke</option>
+        <option>Pepsi</option>
+        <option selected>Sprite</option>
+      </select>
+
+      <input type="reset">
+      <input type="submit" value="Register">
+
+      <button type="reset">
+        Reset
+      </button>
+
+      <button>
+        <img src="images/word.png">Submit your docs
+      </button>
+
+      <button type="button">
+        Do Something in JavaScript
+      </button>
+    </form>
+  </body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      ul {
+        margin-left: 2em;
+        list-style-type: none;
+      }
+
+      /*.word {
+        list-style-image: url("images/word.png");
+      }
+
+      .pdf {
+        list-style-image: url("images/pdf.png");
+      }*/
+
+      a {
+        /*background-image: url(images/word.png);*/
+        background-repeat: no-repeat;
+        padding: 3em 5em;
+        display: inline-block;
+      }
+
+      /*a[href="myDocument1.doc"] {
+        background-image: url(images/word.png);
+      }*/
+
+      /* contains */
+      /*a[href*=".doc"] {
+        background-image: url(images/word.png);
+      }*/
+
+      /* starts with
+      a[href^="my"] {
+        background-image: url(images/word.png);
+      }*/
+
+      /* ends with */
+      a[href$=".doc"], a[href$=".docx"] {
+        background-image: url(images/word.png);
+      }
+
+      a[href$=".pdf"] {
+        background-image: url(images/pdf.png);
+      }
+
+      h2[pcs="5"] {
+        color: red;
+      }
+
+      h2[pcs] {
+        font-family: cursive;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Attribute Selectors</h1>
+    <ul>
+      <li><a href="myDocument1.doc">myDocument1.doc</a></li>
+      <li><a href="myOtherDocument.docx">myOtherDocument.docx</a></li>
+      <li><a href="myPresentation.doc.pdf">myPresentation.pdf</a></li>
+    </ul>
+
+    <h2 pcs="5">PCS Selectors</h2>
+    <h2 pcs>PCS Selectors #2</h2>
+  </body>
+
+</html>
