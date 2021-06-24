@@ -1,0 +1,95 @@
+html {
+  background-color: white
+}
+
+body {
+  background-color: black;
+  color: white;
+  /*width: 800px;*/
+  /*max-width: 800px;*/
+  width: 100%;
+  margin: auto;
+
+  /*padding: 1em 2em;*/
+  /*tb rl*/
+  /*padding: 1em 2em 3em;*/
+  /*t rl b*/
+  /*padding: 1em 2em 3em 4em;*/
+  /*padding-top padding-right etc..*/
+  padding: 4em;
+  /*all sides*/
+
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    width: 80%;
+  }
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px inset gray;
+  padding-bottom: 1em;
+  background: rgb(36, 13, 0);
+  background: radial-gradient(circle, rgba(36, 13, 0, 1) 5%, rgba(121, 9, 71, 1) 15%, rgba(106, 103, 47, 1) 25%, rgba(79, 78, 119, 0.4962359943977591) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+header h1 {
+  font-style: italic;
+  color: green;
+  /*border: 1px solid black;*/
+  border-width: 2px;
+  border-style: dashed;
+  border-color: red;
+  border-bottom-width: 4px;
+  border-radius: 8px;
+}
+
+header img {
+  width: 300px;
+}
+
+/*p,*/
+h1 {
+  color: red;
+  /*color: green;*/
+  /*text-align: justify;*/
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: gray;
+}
+
+a:focus {
+  color: yellow;
+}
+
+a:hover {
+  color: fuchsia;
+}
+
+a:active {
+  color: greenyellow;
+}
+
+#copyright {
+  font-weight: bold;
+}
+
+nav ul,
+nav li {
+  display: inline;
+  padding: 0;
+}

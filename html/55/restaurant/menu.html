@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="images/restaurant.jpg">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/restaurant.css">
+    <style>
+      .menuItem {
+        font-style: italic;
+        /*height: 280px;*/
+        overflow: auto;
+        /* clear: left; */
+
+        margin-bottom: 1em;
+        box-shadow: 2px 2px 2px 2px red;
+      }
+
+      .menuItem img {
+        transform: rotate(7deg);
+        float: left;
+        margin: 2em;
+      }
+
+      .saleItem {
+        text-shadow: 2px 2px 2px red;
+      }
+
+      .bigText {
+        font-size: 3em;
+      }
+
+      .error {
+        color: red
+      }
+
+      /*.clearFix {
+        clear: both;
+      }*/
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>PCS Restaurant</h1>
+      <img src="images/restaurant.jpg" alt="the restaurant">
+      <nav>
+        <ul>
+          <li><a href="index.html">home</a></li> |
+          <li><a href="menu.html">our menu</a></li> |
+          <li><a href="aboutUs.html">about us</a></li> |
+          <li><a href="contactUs.html">contact us</a></li> |
+          <li><a href="https://www.google.com" target="_blank">google</a></li>
+        </ul>
+      </nav>
+    </header>
+    Menu
+    <div>
+      <div class="menuItem">
+        <h2>Steak</h2>
+        <img src="images/steak.jpg" alt="a delicious steak">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque culpa doloremque facere consequatur minus,
+          quibusdam totam, maxime inventore, temporibus esse veniam commodi architecto eveniet eum. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="menuItem saleItem clearFix">
+        <h2>Burger</h2>
+        <img src="images/burger.jpg" alt="a delicious burger">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque culpa doloremque facere consequatur minus,
+          quibusdam totam, maxime inventore, temporibus esse veniam commodi architecto eveniet eum.</p>
+      </div>
+    </div>
+    <div id="copyright" class="saleItem bigText">
+      &copy; Copyright 2021 PCS
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="images/restaurant.jpg">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/restaurant.css">
+    <style>
+      table {
+        border-collapse: collapse;
+        margin: auto;
+      }
+
+      td,
+      th {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: 1em 2em;
+      }
+
+      td {
+        text-align: right
+      }
+
+      td:first-child {
+        font-weight: bold;
+        color: lightblue;
+      }
+
+      tfoot {
+        color: red;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #2e2c2c;
+      }
+
+      tbody tr:hover {
+        background-color: lightgray;
+        color: black;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      form {
+        width: 600px;
+        margin: auto;
+      }
+
+      input,
+      textarea {
+        display: block;
+        margin-bottom: .5em;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .buttons {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>PCS Restaurant</h1>
+      <img src="images/restaurant.jpg" alt="the restaurant">
+      <nav>
+        <ul>
+          <li><a href="index.html">home</a></li> |
+          <li><a href="menu.html">our menu</a></li> |
+          <li><a href="aboutUs.html">about us</a></li> |
+          <li><a href="contactUs.html">contact us</a></li> |
+          <li><a href="https://www.google.com" target="_blank">google</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <table>
+        <caption>Number Sold</caption>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>2016</th>
+            <th>2017</th>
+            <th>2018</th>
+            <th>2019</th>
+            <th>2020</th>
+            <th>2021</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Burgers</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Hot Dogs</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Steak Sandwich</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Shnitzel Sandwich</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Egg Roll</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Pastrami Sandwich</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Chulent</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Totals</td>
+            <td>243</td>
+            <td>3343</td>
+            <td>4435</td>
+            <td>54543</td>
+            <td>645</td>
+            <td>754</td>
+          </tr>
+        </tfoot>
+      </table>
+      <h2>Please give us feedback!</h2>
+      <form action="feedback.php" method="POST">
+        <label for="name">Name:</label>
+        <input name="name" id="name" required placeholder="enter your name">
+        <label for="email">Email:</label>
+        <input name="email" id="email" required placeholder="enter your email" type="email">
+        <label for="dateVisited">Date Visited:</label>
+        <input name="dateVisited" id="dateVisited" required type="date">
+        <label for="rating">Rating:</label>
+        <input name="rating" id="rating" required type="range" min="0" max="5" value="5">
+        <label for="comments">Please tell us about your visit:</label>
+        <textarea name="comments" id="comments" required></textarea>
+
+        <div class="buttons">
+          <button>Submit Feedback!</button>
+        </div>
+      </form>
+      <div id="copyright">
+        &copy; Copyright 2021 PCS
+      </div>
+    </article>
+
+  </body>
+
+</html>

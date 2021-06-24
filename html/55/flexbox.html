@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    article {
+      border: 2px solid red;
+      display: flex;
+      /*display: inline-flex;*/
+      /*flex-direction: column-reverse;*/
+      /*flex-wrap: wrap;*/
+      /*height: 550px;*/
+      justify-content: space-around;
+
+      height: 800px;
+      /*align-items: baseline;*/
+      align-items: flex-start;
+    }
+
+    section {
+      border: 2px solid yellow;
+    }
+
+    section:nth-child(3) {
+      font-size: 2em;
+      align-self: stretch;
+    }
+
+    section:nth-child(4) {
+      /*flex-grow: 1;*/
+      /*flex-shrink: 0;*/
+      flex-basis: 200px;
+      /*flex: 1 0 200px;*/
+    }
+
+    section:nth-child(5) {
+      /*flex-shrink: 2;*/
+    }
+
+    section:nth-child(7) {
+      order: 1;
+    }
+
+    .box {
+      background-color: yellow;
+      border: 1px solid black;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      /*justify-content: center;
+      align-items: center;*/
+    }
+
+    .box p {
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flexbox</h1>
+  </header>
+  <article>
+    <section>
+      <h1>1</h1>
+      <div>Im a flex item</div>
+    </section>
+    <section>
+      <h1>2</h1>
+      <div>Im a flex item</div>
+    </section>
+    <section>
+      <h1>3</h1>
+      <div>Im a flex item</div>
+    </section>
+    <section>
+      <h1>4</h1>
+      <div>Im a flex item</div>
+    </section>
+    <section>
+      <h1>5</h1>
+      <div>Im a flex item</div>
+    </section>
+    <section>
+      <h1>6</h1>
+      <div>Im a flex item</div>
+    </section>
+    <section>
+      <h1>7</h1>
+      <div>Im a flex item</div>
+    </section>
+    <section>
+      <h1>8</h1>
+      <div>Im a flex item</div>
+    </section>
+    <p>Some text</p>
+  </article>
+  <p>Some text</p>
+  <div class="box"><p>Hi</p></div>
+</body>
+</html>
