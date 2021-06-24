@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /*article,
+      aside {
+        float: left;
+        padding: 0 1em;
+        box-sizing: border-box;
+      }
+
+      aside {
+        width: 25%;
+      }
+
+      article {
+        width: 50%;
+      }*/
+
+      @media screen and (min-width: 800px) {
+        main {
+          display: flex;
+        }
+
+        article {
+          flex: 2 1 300px;
+        }
+
+        aside {
+          flex: 1 2 150px;
+        }
+      }
+
+      article,
+      aside {
+        padding: 0 1em;
+      }
+
+      .form-group {
+        display: flex;
+      }
+
+      .form-group input {
+        flex: 1;
+        margin-left: .5em;
+      }
+
+      .outer {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+      .inner {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <aside>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus ut quam quibusdam iste magni nisi
+        aliquam
+        corrupti impedit id illo maxime, doloremque voluptatibus sunt excepturi minus eveniet nostrum fugiat ullam?
+      </aside>
+      <article>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, facere doloremque iure minus quaerat odio
+        quam. Dolorum nihil quia deleniti explicabo ratione eius pariatur quod totam mollitia sequi voluptatum
+        dignissimos
+        quae, dicta, quo repudiandae architecto atque tenetur provident. Eum molestiae veniam fugit sit, incidunt sequi.
+        Rerum tempore quia minus nesciunt natus quos, obcaecati facere totam quam iure unde sunt, aut eligendi ratione
+        alias aliquid animi vel laudantium. Excepturi, sunt voluptates mollitia soluta dolor repellat ut necessitatibus
+        ipsa nobis neque laboriosam voluptatum architecto beatae recusandae, quo vero placeat, nostrum dignissimos
+        commodi? Repudiandae enim rem veritatis totam aspernatur libero doloribus reprehenderit quae? Similique saepe
+        adipisci vero, odit reiciendis recusandae. Illo temporibus quisquam pariatur laborum delectus architecto magnam
+        quis quasi totam corrupti dolor iusto nisi aliquam beatae nulla, saepe eaque, ut enim et dignissimos incidunt
+        veniam tenetur quae! Dignissimos impedit in non officiis, eveniet repellendus vero corporis soluta incidunt
+        alias
+        nihil. Commodi maxime illum accusamus odio ratione, enim quis eaque delectus neque consequatur? Earum quis
+        repellendus, facilis sequi maxime commodi inventore autem deserunt sed et tempore consequuntur, amet impedit
+        dignissimos ad? Sed quis hic facere sint magni doloremque quod ex, modi illum adipisci, optio, rerum sunt alias
+        atque neque. Suscipit temporibus nisi laborum? Ullam, consequuntur dolorum assumenda doloribus officia adipisci
+        dolor quae dolorem perspiciatis non praesentium excepturi saepe eum sed magnam numquam sapiente expedita hic aut
+        sit. Ea rerum commodi distinctio eos modi architecto vitae quos fuga velit officiis sed dolore labore corrupti
+        voluptas id eveniet, deleniti repudiandae soluta? Laudantium fuga natus pariatur.</article>
+      <aside>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quia doloremque magnam, dolores voluptate
+        perspiciatis eligendi aut atque vel molestiae. Fugiat facilis neque at, nam nisi enim eos sed cum?</aside>
+    </main>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input name="name" id="name">
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input name="age" id="age">
+      </div>
+
+      <button>register</button>
+    </form>
+
+    <div class="outer">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, odit?</p>
+      <div class="inner">
+        <div>Lorem, ipsum dolor.</div>
+        <div>Ipsam, iste rem?</div>
+      </div>
+    </div>
+  </body>
+
+</html>
