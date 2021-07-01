@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      :root {
+        --main-bg-color: #ccddef;
+        --alt-bg-color: #dddfff;
+        --def-padding: 1.5em;
+      }
+
+      header {
+        background-color: var(--main-bg-color); /*#ccddef;*/
+        padding: var(--def-padding);/*2em;*/
+      }
+
+      article {
+        background-color: var(--alt-bg-color);
+        padding: var(--def-padding);
+      }
+
+      aside {
+        background-color: var(--main-bg-color);
+        padding: var(--def-padding);
+      }
+
+      footer {
+        background-color: var(--alt-bg-color);
+        padding: var(--def-padding);
+      }
+
+      footer p {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>header</header>
+    <article>article</article>
+    <aside>aside</aside>
+    <footer>footer
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nesciunt assumenda deleniti atque eaque? Itaque voluptatibus, ratione quidem cupiditate iste id rem consequuntur perferendis, optio quas expedita officiis sunt ipsum.</p>
+    </footer>
+  </body>
+
+</html>
