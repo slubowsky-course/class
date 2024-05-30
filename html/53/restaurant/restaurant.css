@@ -1,0 +1,19 @@
+/*p {
+  color: green;
+}
+
+h1 {
+  color: red;
+}*/
+
+header {
+  text-align: center;
+  /*justify*/
+
+  border: 15px dashed green;
+  border-width: 10px;
+  border-style: outset;
+  border-color: teal;
+
+  border-top-color: black;
+}
