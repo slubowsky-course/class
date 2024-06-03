@@ -10,24 +10,90 @@
       /*p {
       color: violet;
     }*/
+    #copyright {
+      font-style: italic;
+    }
+
+    .menu-item {
+      border: 10px solid red;
+      border-radius: 8px;
+      margin-bottom: 2.5em;
+      /*box-shadow: 6px 6px 6px 6px gray;*/
+
+      /*box-shadow: -3px -3px 3px 3px gray, 3px 3px 3px 3px black;*/
+      box-shadow: -4px -4px 4px 4px blue, -8px -8px 8px 8px green, 3px 3px 3px 3px blue, 6px 6px 6px 6px green;
+
+      /*clear: left;*/
+      /*height: 250px;*/
+      /*overflow: auto;*/
+
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .menu-item img {
+      float: left;
+      padding-right: 1em;
+
+    }
+
+    .sale-item {
+      background-color: yellow;
+    }
+
+    .big-text {
+      /*font-size: 4rem;*/
+    }
+
+    .error {
+      color: red;
+    }
+
     </style>
   </head>
   <body>
-    <header>
-      <h1>PCS Restaurant</h1>
-      <img src="images/restaurant.jpg" alt="PCS Restaurant image" width="200" />
+    <div>
+      <header>
+        <h1>PCS Restaurant</h1>
 
-      <nav>
-        <a href="index.html">home</a> | <a href="menu.html">our menu</a> | <a href="aboutUs.html">about us</a> |
-        <a href="https://www.google.com">google</a>
-      </nav>
-    </header>
-    <hr />
+        <!--img src="https://t3.ftcdn.net/jpg/03/24/73/92/360_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg" alt="PCS Restaurant image" width="200" xheight="500"-->
+        <img src="images/restaurant.jpg" alt="PCS Restaurant image" width="200" />
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae optio aspernatur ratione, vel molestiae ut
-      consequuntur. Neque modi voluptate sequi eaque maxime adipisci molestiae architecto, iste tempore perspiciatis ab
-      pariatur.
-    </p>
+        <nav>
+          <a href="index.html">home</a> | <a href="menu.html">our menu</a> | <a href="aboutUs.html">about us</a> |
+          <a href="https://www.google.com">google</a>
+        </nav>
+      </header>
+    </div>
+
+    <section class="menu-item error">
+      <h2>Not found</h2>
+      <img src="ximages/steak.jpg" alt="failed to load" />
+      <p>
+        This item was not found
+      </p>
+    </section>
+
+    <section class="menu-item sale-item">
+      <h2>Steak</h2>
+
+      <p>
+        <img src="images/steak.jpg" alt="delicious steak" />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quam pariatur architecto nobis dolorum
+      </p>
+    </section>
+
+    <section class="menu-item">
+      <h2>Hamburger</h2>
+      <p>
+        <img src="images/hamburger.jpg" alt="delicious hamburger" />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quae, natus enim fuga culpa voluptatem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde rerum autem, accusamus sequi placeat ex adipisci non quasi, ullam libero assumenda laborum suscipit provident quod eos? Placeat perferendis est illo voluptatem laborum libero aspernatur blanditiis doloribus, officia consequatur soluta dolor beatae culpa corporis optio. Illum, magni sapiente accusantium dolore laudantium quos nesciunt voluptatum delectus quae quo? Necessitatibus consequatur, mollitia quia deleniti facilis unde, reiciendis cum, quis iusto porro dolorem vitae soluta. Corporis, quam. Iste ratione delectus culpa excepturi, unde quia. Iste itaque, veritatis officia harum praesentium accusantium, ratione doloribus sint esse ad eos neque sunt tenetur, optio nesciunt? Consequatur, iure? Laudantium suscipit ea, hic saepe quam iste possimus eligendi sit similique? Nihil exercitationem, odio qui tempore debitis tenetur voluptates recusandae ipsa possimus provident. Ad, nemo architecto laboriosam a sint dolorem sed beatae voluptates eaque ullam tempora labore commodi repellat. Et suscipit ratione aspernatur accusamus repudiandae accusantium ad, nihil dolor reiciendis numquam voluptas enim earum excepturi? Similique, culpa facere? Asperiores dolores obcaecati harum minima voluptas odio modi, doloremque quasi perferendis sequi, error culpa numquam? Provident necessitatibus qui, velit, expedita ad aperiam quidem eum vero magni, similique accusamus exercitationem eligendi sunt iste enim! Laboriosam earum cupiditate nesciunt corporis ex, a fuga distinctio suscipit modi reprehenderit deserunt commodi dolores corrupti tenetur enim recusandae? Dignissimos adipisci corporis laborum incidunt aut, placeat enim nam impedit unde possimus quas soluta praesentium magni. Nihil praesentium sed error harum. Dicta pariatur nesciunt blanditiis id autem molestias quam perferendis aperiam, nobis repudiandae nostrum soluta aspernatur optio voluptatem tempore.
+      </p>
+    </section>
+
+    <section id="copyright">
+      <h5 class="big-text">Copyright PCS &copy; 2024</h5>
+    </section>
   </body>
 </html>
