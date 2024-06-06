@@ -1,0 +1,49 @@
+html {
+  background-color: white;
+}
+
+body {
+  max-width: 800px;
+  /*width: 80%;*/
+  margin: auto;
+  background-color: black;
+  color: white;
+  padding: 1em;
+
+  overflow-y: scroll;
+}
+
+header {
+  text-align: center;
+  border: 10px outset teal;
+  border-top-color: black;
+  border-radius: 16px;
+  margin-bottom: 1em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: gray;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+a:focus {
+  color: pink;
+}
+
+a:active {
+  color: red;
+}
+
+.inline-list, .inline-list li {
+  display: inline;
+  padding-left: 0;
+}
