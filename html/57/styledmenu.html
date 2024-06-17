@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        background-color: #292929;
+        color: white;
+        width: 100px;
+      }
+
+      /* more pseudo classes */
+
+      /*li {
+        border-top: 3px solid /*black* /yellow;
+        border-bottom: 3px solid /*#3c3c3c* /red;
+      }*/
+
+      /*li:first-child {
+        border-top: none;
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }*/
+
+      /*li:first-of-type {
+        border-top: none;
+      }
+
+      li:last-of-type {
+        border-bottom: none;
+      }*/
+
+      li:not(:first-of-type) {
+        border-top: 3px solid /*black*/ yellow;
+      }
+
+      li:not(:last-of-type) {
+        border-bottom: 3px solid /*#3c3c3c*/ red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <p>im a p at top of ul</p>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+      <li>four</li>
+      <li>five</li>
+      <p>im a p at bottom of ul</p>
+    </ul>
+  </body>
+</html>

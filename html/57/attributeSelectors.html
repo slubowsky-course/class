@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        /*list-style-image: url("word.jpg");*/
+        list-style-type: none;
+        /*padding-left: 4em;*/
+      }
+
+      /*.word {
+        list-style-image: url("word.jpg");
+      }*/
+
+      a {
+        background-repeat: no-repeat;
+        padding-left: 4em;
+        height: 5em;
+        display: inline-block;
+      }
+
+      /* attribute selector - exact
+      a[href="homework.docx"] {
+        background-image: url('word.jpg');
+      }*/
+
+      /* * = contains
+      a[href*=".ppt"] {
+        background-image: url('powerpoint.png');
+      }
+
+      a[href*=".doc"] {
+        background-image: url('word.jpg');
+      }*/
+
+
+      /* ends with */
+      /*a[href$=".doc"] {
+        background-image: url('word.jpg');
+      }
+
+      a[href$=".ppt"] {
+        background-image: url('powerpoint.png');
+      }*/
+
+      /* starts with */
+      a[href^="resume"] {
+        background-image: url('word.jpg');
+      }
+
+      a[data-foo="5"] {
+        color: red;
+      }
+
+      a[pcs] {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PCS Dropbox</h1>
+    <ul>
+      <li><a href="homework.docx" data-foo="5">homework.docx</a></li>
+      <li><a href="resume.doc" pcs>resume.doc</a></li>
+      <li><a href="myPresentation.doc.pptx">myPresenation.doc.pptx</a></li>
+    </ul>
+  </body>
+</html>

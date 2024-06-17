@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="images/restaurant.jpg" rel="icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet" />
+    <link href="css/restaurant.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+    <style>
+      /*p {
+      color: violet;
+    }*/
+    #copyright {
+      font-style: italic;
+    }
+
+    .menu-item {
+      border: 10px solid red;
+      border-radius: 8px;
+      margin-bottom: 2.5em;
+      /*box-shadow: 6px 6px 6px 6px gray;*/
+
+      /*box-shadow: -3px -3px 3px 3px gray, 3px 3px 3px 3px black;*/
+      box-shadow: -4px -4px 4px 4px blue, -8px -8px 8px 8px green, 3px 3px 3px 3px blue, 6px 6px 6px 6px green;
+
+      /*clear: left;*/
+      /*height: 250px;*/
+      /*overflow: auto;*/
+
+      /*display: inline-block;*/
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .menu-item img {
+      float: left;
+      padding-right: 1em;
+
+    }
+
+    .sale-item {
+      background-color: yellow;
+    }
+
+    .big-text {
+      /*font-size: 4rem;*/
+    }
+
+    .error {
+      color: red;
+    }
+
+    .clear-fix {
+      clear: both;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1>PCS Restaurant</h1>
+
+        <!--img src="https://t3.ftcdn.net/jpg/03/24/73/92/360_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg" alt="PCS Restaurant image" width="200" xheight="500"-->
+        <img src="images/restaurant.jpg" alt="PCS Restaurant image" width="200" />
+
+        <nav>
+          <a href="index.html">home</a> | <a href="menu.html">our menu</a> | <a href="aboutUs.html">about us</a> |
+          <a href="https://www.google.com">google</a>
+        </nav>
+      </header>
+    </div>
+
+    <section class="menu-item error clear-fix">
+      <h2>Not found</h2>
+      <img src="ximages/steak.jpg" alt="failed to load" />
+      <p>
+        This item was not found
+      </p>
+    </section>
+
+    <section class="menu-item sale-item clear-fix">
+      <h2>Steak</h2>
+
+      <p>
+        <img src="images/steak.jpg" alt="delicious steak" />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quam pariatur architecto nobis dolorum
+      </p>
+    </section>
+
+    <section class="menu-item clear-fix">
+      <h2>Hamburger</h2>
+      <p>
+        <img src="images/hamburger.jpg" alt="delicious hamburger" />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quae,
+      </p>
+    </section>
+
+    <section id="copyright" class="clear-fix">
+      <h5 class="big-text">Copyright PCS &copy; 2024</h5>
+    </section>
+  </body>
+</html>

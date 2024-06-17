@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* universal selector */
+      * {
+        margin-top: 1em;
+      }
+
+      /* type selector */
+      section {
+        padding-left: 1em;
+      }
+
+      /* id selector */
+      #theOne {
+        color: green;
+      }
+
+      /* class selector */
+      .special {
+        font-weight: bold;
+      }
+
+      /* multiple selectors - .special and p */
+      .special,
+      p {
+        rotate: 12deg;
+      }
+
+      /* combination - p that is .special*/
+      p.special {
+        font-style: italic;
+      }
+
+      /* descendent selectors*/
+      /* .special in a p */
+      p .special {
+        color: red;
+      }
+
+      /* all children in section */
+      section * {
+        text-decoration: underline;
+      }
+
+      /* immediate descendent only */
+      section > p {
+        text-transform: uppercase;
+      }
+
+      /* next sibling selectors */
+      /* immediate sibling */
+      section + p {
+        font-family: cursive;
+      }
+
+      /* any sibling even not immediate */
+      section ~ p {
+        font-size: 1.25em;
+      }
+
+      /* not */
+      section:not(.special) {
+        letter-spacing: .50em;
+      }
+
+      /* pseudo classes */
+      section:hover {
+        background-color: pink;
+      }
+
+      /* pseudo element */
+      .special::first-letter {
+        font-size: 1.5em;
+        font-family: cursive;
+      }
+
+      section::first-line {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Im at the top</p>
+
+    <section id="theOne">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repudiandae, veritatis molestias porro labore
+      quam aliquam quas sapiente nobis voluptates harum quis illo ad repellat.
+    </section>
+    <section class="special">
+      Ea, illum est natus voluptates ex dignissimos ipsa beatae magnam harum corporis placeat cum accusamus neque nobis
+      ipsam! Ratione expedita aliquid nulla tempore aliquam natus!
+    </section>
+    <section>
+      Quidem eligendi nihil molestias in maiores soluta! Placeat voluptatum obcaecati, at consectetur quam tenetur
+      <p>Im a p in middle of a section</p>
+      <div><p>Im a p in a div in a section</p></div>
+      perspiciatis corrupti animi amet rem quos eius laboriosam asperiores aperiam delectus?
+    </section>
+    <section>
+      Tempore omnis tenetur rerum eum quaerat repellendus? Dolore dignissimos iure ut sequi molestiae. Fugiat debitis
+      similique totam libero commodi tempora nulla vitae necessitatibus voluptates voluptatum.
+    </section>
+    <section>
+      Iure eaque enim fugit, ex nemo temporibus minima accusantium culpa accusamus, cum adipisci ipsa quasi soluta odit
+      amet earum fugiat. Illum assumenda libero pariatur tempora!
+    </section>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, natus numquam quisquam soluta possimus,
+      necessitatibus repellendus dolore dolorum, atque voluptate maiores nam officia nesciunt incidunt.
+    </p>
+    <p class="special">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ducimus, officiis at nesciunt voluptas libero magni
+      esse odit ea odio dolores eaque magnam ad quisquam.
+      <span class="special">Im special!!!</span>
+    </p>
+  </body>
+</html>
