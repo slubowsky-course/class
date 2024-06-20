@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: auto;
+      }
+
+      td, th {
+        border: 1px solid black;
+      }
+
+      td:not(:first-child) {
+        text-align: right;
+      }
+
+      td:first-child {
+        font-weight: bold;
+      }
+
+      caption {
+        caption-side: bottom;
+      }
+
+      tfoot {
+        /*color: red;*/
+        background-color: red;
+        color: white;
+      }
+
+      /*.even {
+        background-color: lightblue;
+      }*/
+
+      /*tbody tr:nth-child(1) {
+        background-color: lightblue;
+      }*/
+
+      /*tbody tr:nth-child(2n) {
+        background-color: lightblue;
+      }*/
+
+      /*tbody tr:nth-child(2n+1) {
+        background-color: lightblue;
+      }*/
+
+      /*tbody tr:nth-child(-n+3) {
+        background-color: lightblue;
+      }*/
+
+      tbody tr:nth-child(even) {
+        background-color: lightblue;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: pink;
+      }
+
+      td:nth-child(4) {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+
+      table tr:hover {
+        background-color: blueviolet;
+      }
+
+      /*#it {
+        color:rgb(255, 80, 223);
+      }*/
+
+      .special {
+        color: green;
+      }
+
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Current Polling Results</h1>
+    <table>
+      <caption>6/19/2024 Poll</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Republicans</th>
+          <th>Democrats</th>
+          <th>Independents</th>
+          <th>Other</th>
+          <th>Still more</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Joe Biden</td>
+          <td>44545</td>
+          <td>54534</td>
+          <td>543543</td>
+          <td>54534</td>
+          <td>543543</td>
+        </tr>
+        <tr class="even">
+          <td>Donald Trump</td>
+          <td>44545</td>
+          <td>54534</td>
+          <td>543543</td>
+          <td>54534</td>
+          <td>543543</td>
+        </tr>
+        <tr>
+          <td>Kennedy</td>
+          <td>44545</td>
+          <td>54534</td>
+          <td>543543</td>
+          <td>54534</td>
+          <td>543543</td>
+        </tr>
+        <tr class="even">
+          <td>Ron Desantis</td>
+          <td>44545</td>
+          <td>54534</td>
+          <td>543543</td>
+          <td>54534</td>
+          <td>543543</td>
+        </tr>
+        <tr>
+          <td>Nikki Haley</td>
+          <td>44545</td>
+          <td>54534</td>
+          <td>543543</td>
+          <td>54534</td>
+          <td>543543</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td>5435435</td>
+          <td>5463543</td>
+          <td>6546546</td>
+          <td>67657</td>
+          <td>5437543</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <p id="it" class="special">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aspernatur consequuntur laborum eveniet blanditiis repellendus, omnis, vitae autem, voluptate rerum excepturi assumenda nesciunt voluptatum. Rem, deserunt veniam. Ipsa, aspernatur laborum.</p>
+  </body>
+</html>
