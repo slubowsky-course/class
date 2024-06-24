@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      article {
+        border: 3px solid red;
+        /*overflow: auto;*/
+
+        display: flex;
+        /*display: inline-flex;*/
+
+        /*flex-direction: reverse-column;*/
+
+        flex-wrap: wrap;
+
+        height: 800px;
+
+        justify-content: flex-start;
+        align-items: /*flex-start;*/ baseline;
+        gap: 1em;
+      }
+
+      section {
+        border: 3px solid yellow;
+        /*float: left;*/
+        /*display: inline-block;*/
+
+        /*width: fit-content;*/
+
+        /*flex-grow: 1;*/
+
+        /*flex: 1 1 0;*/
+        /*flex: 1;*/
+      }
+
+      /*p {
+        clear: left;
+      }*/
+
+      section:nth-child(2) {
+        font-size: 2em;
+        order: -1;
+      }
+
+      section:nth-child(3) {
+        align-self: flex-end;
+      }
+
+      section:nth-child(4) {
+        /*flex: 1;
+        flex: 1 1 0;*/
+        /*flex-basis: 0;*/
+      }
+
+      section:nth-child(5) {
+        /*flex-grow: 1;*/
+        /*flex-shrink: 0;*/
+        /*flex-shrink: 2;*/
+      }
+
+      section:nth-child(6) {
+        /*flex-grow: 3;
+        flex-shrink: 3;*/
+      }
+
+      section:nth-child(7) {
+        /*flex-basis: 100px;*/
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        border: 1px solid black;
+
+        display: flex;
+        /*justify-content: center;
+        align-items: center;*/
+      }
+
+      .box p {
+        margin: auto;
+      }
+
+      /*input {
+        width: 90%;
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      label {
+        width: 10%;
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 0;
+      }*/
+
+      .form-group {
+        display: flex;
+      }
+
+      .form-group input {
+        /*flex-grow: 1;*/
+        flex: 1;
+      }
+
+      .outer {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .inner {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox</h1>
+    <article>
+      <section>
+        <h1>1</h1>
+        <div>Im a flexbox item</div>
+      </section>
+      <section>
+        <h1>2</h1>
+        <div>Im a flexbox item</div>
+      </section>
+      <section>
+        <h1>3</h1>
+        <div>Im a flexbox item</div>
+      </section>
+      <section>
+        <h1>4</h1>
+        <div>Im a flexbox item with a little more text</div>
+      </section>
+      <section>
+        <h1>5</h1>
+        <div>Im a flexbox item</div>
+      </section>
+      <section>
+        <h1>6</h1>
+        <div>Im a flexbox item</div>
+      </section>
+      <section>
+        <h1>7</h1>
+        <div>Im a flexbox item</div>
+      </section>
+      <section>
+        <h1>8</h1>
+        <div>Im a flexbox item</div>
+      </section>
+    </article>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta voluptatibus quis cupiditate aut sit laboriosam!
+      Quo distinctio, voluptatibus praesentium eaque earum, quasi sunt eum ad officiis quisquam numquam, harum aliquid.
+    </p>
+
+    <div class="box">
+      <p>Hi!</p>
+    </div>
+
+    <hr />
+
+    <form>
+      <div class="form-group">
+        <label for="first">first:</label><input id="first" />
+      </div>
+
+      <div class="form-group">
+        <label for="last">last:</label><input id="last" />
+      </div>
+    </form>
+
+    <hr>
+
+    <div class="outer">
+      <p>Im in outer</p>
+      <div class="inner">
+        <div>im a div in inner</div>
+        <div>im a div in inner</div>
+      </div>
+    </div>
+  </body>
+</html>

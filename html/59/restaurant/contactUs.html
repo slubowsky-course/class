@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="images/restaurant.jpg" rel="icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet" />
+    <link href="css/restaurant.css" rel="stylesheet" />
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: auto;
+      }
+
+      td {
+        border-top: 1px solid white;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: rgb(101, 195, 226);
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: rgb(211, 233, 240);
+      }
+
+      table tr:hover {
+        background-color: aqua;
+      }
+
+      td:last-child {
+        font-style: italic;
+      }
+
+      input, textarea {
+        width: 100%;
+      }
+
+      textarea {
+        height: 6em;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1>PCS Restaurant</h1>
+
+        <img src="images/restaurant.jpg" alt="PCS Restaurant image" width="200" />
+
+        <nav>
+          <ul class="inline-list">
+            <li><a href="index.html">home</a></li>
+            |
+            <li><a href="menu.html">our menu</a> |</li>
+            <li><a href="aboutUs.html">about us</a> |</li>
+            <li><a href="contactUs.html">contact us</a> |</li>
+            <li><a href="https://www.google.com">google</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <h1>Contact Us</h1>
+    <table>
+      <caption>
+        Nutrition Information
+      </caption>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Calories</th>
+          <th>Fat</th>
+          <th>Sugar</th>
+          <th>Protein</th>
+          <th>Carbohydrates</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Steak</td>
+          <td>100</td>
+          <td>25g</td>
+          <td>35g</td>
+          <td>20%</td>
+          <td>25%</td>
+        </tr>
+        <tr>
+          <td>Hamburger</td>
+          <td>150</td>
+          <td>35g</td>
+          <td>27g</td>
+          <td>30%</td>
+          <td>45%</td>
+        </tr>
+        <tr>
+          <td>Chulent</td>
+          <td>345</td>
+          <td>24g</td>
+          <td>37g</td>
+          <td>50%</td>
+          <td>62%</td>
+        </tr>
+        <tr>
+          <td>Tofu</td>
+          <td>10</td>
+          <td>18g</td>
+          <td>32g</td>
+          <td>28%</td>
+          <td>12%</td>
+        </tr>
+        <tr>
+          <td>French Fries</td>
+          <td>350</td>
+          <td>234g</td>
+          <td>65g</td>
+          <td>110%</td>
+          <td>450%</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Totals</td>
+          <td>55646</td>
+          <td>5465465</td>
+          <td>676879</td>
+          <td>324324%</td>
+          <td>98876%</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <hr>
+
+    <h2>We welcome your feedback</h2>
+    <h3>Enter feedback below</h3>
+    <form method="post">
+      <label for="name">name:</label>
+      <input name="name" id="name" placeholder="enter your name" minlength="3" maxlength="5"/>
+
+      <label for="email">email:</label>
+      <input type="email" name="email" id="email" placeholder="enter your email" required value="jbiden@whitehouse.gov"/>
+
+      <label for="rating">rating</label>
+      <input type="range" name="rating" id="rating" min="1" max="5">
+
+      <label for="feedback">feedback</label>
+      <textarea name="feedback" id="feedback" placeholder="enter feedback here" minlength="10"></textarea>
+
+      <button>submit feedback</button>
+    </form>
+    <section>
+      <h5>Copyright PCS &copy; 2024</h5>
+    </section>
+  </body>
+</html>
