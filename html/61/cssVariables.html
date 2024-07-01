@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --bg-color: red;
+        --def-margin: 1em;
+        --foo: 50px;
+      }
+
+      header {
+        --bg-color: blue;
+        background-color: var(--bg-color);
+        margin: var(--def-margin);
+        padding: var(--foo);
+      }
+
+      article {
+        background-color: var(--bg-color);
+        margin: var(--def-margin);
+        transition-duration: 2s;
+        transition-delay: 2s;
+
+        transition-property: font-size;
+      }
+
+      article:hover {
+        font-size: 2em;
+        background-color: blue;
+        margin: 10px;
+
+        transition: margin 2s ease-in-out 2s;
+      }
+
+      aside {
+        background-color: var(--bg-color);
+        margin: var(--def-margin);
+
+        animation-duration: 3s;
+        animation-name: slideout;
+      }
+
+      footer {
+        background-color: var(--bg-color);
+        margin: var(--def-margin);
+
+        animation-duration: 3s;
+        animation-name: slidein;
+      }
+
+      @keyframes slidein {
+        from {
+          translate: 150vw 0;
+          scale: 200% 1;
+        }
+
+        to {
+          translate: 0 0;
+          scale: 100% 1;
+        }
+      }
+
+      @keyframes slideout {
+        to {
+          translate: 150vw 0;
+          scale: 200% 1;
+        }
+
+        from {
+          translate: 0 0;
+          scale: 100% 1;
+        }
+      }
+
+      footer::before {
+        content: 'before';
+        display: block;
+      }
+
+      footer::after {
+        content: 'after';
+        display: block;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /*transition-duration: 2s;*/
+      }
+
+      .box:hover {
+        width: 400px;
+        height: 400px;
+        rotate: 180deg;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <article>article</article>
+    <aside>aside</aside>
+    <footer>footer</footer>
+
+    <div class="box">Hi!!!</div>
+  </body>
+</html>
