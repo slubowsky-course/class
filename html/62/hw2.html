@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        gap: 1em;
+        grid-auto-rows: 100px;
+
+        grid-template-areas:
+            'a';
+            /*'b'
+            'c'
+            'd'
+            'e'
+            'f';*/
+      }
+
+      div {
+        background-color: orange;
+        /*height: 100px;*/
+      }
+
+      div:nth-child(1) {
+        grid-area: a;
+      }
+
+      @media screen and (600px <=width) {
+        body {
+          grid-template-areas:
+            'a a';
+            /*'b c'
+            'd e'
+            'f g';*/
+        }
+      }
+
+      @media screen and (min-width: 800px) {
+        body {
+          grid-template-areas:
+            'a a'; /*b c';*/
+            /*'d e f g';*/
+
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+  </body>
+</html>
