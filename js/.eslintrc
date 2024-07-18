@@ -1,5 +1,13 @@
 {
+  "extends" : "eslint:recommended",
   "rules": {
-    "no-plusplus": "error"
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"],
+    "no-var": "error",
+    "eqeqeq": "error"
+  },
+  "env": {
+    "browser": true,
+    "es6": true
   }
 }
