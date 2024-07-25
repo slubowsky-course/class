@@ -4,7 +4,8 @@
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
     "no-var": "error",
-    "eqeqeq": "error"
+    "eqeqeq": "error",
+    "wrap-iife": "error"
   },
   "env": {
     "browser": true,
