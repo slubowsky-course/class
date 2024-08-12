@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="msgText">
+    <input id="modal" type="checkbox">modal
+    <button id="addMsg">show msg</button>
+    <hr>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ipsum optio possimus est laborum at recusandae
+    atque, commodi repellendus, quo ex molestiae officia fugiat debitis nemo expedita aperiam accusamus minima
+    assumenda! Nobis officia amet velit ea earum exercitationem tempore eveniet quam asperiores dicta sapiente culpa
+    impedit consequuntur ex quaerat, iste delectus accusamus quae sint obcaecati neque sit expedita? Exercitationem
+    fugit minus autem ullam voluptas dignissimos natus numquam consequatur ipsum quos excepturi modi assumenda
+    distinctio consequuntur quasi deleniti quia minima mollitia voluptatibus, accusantium nisi hic! Doloribus,
+    dignissimos mollitia nobis neque rem perferendis explicabo dolorum corporis architecto sint, asperiores soluta saepe
+    eligendi quam? Ex, vel magnam sequi deleniti dolorem quam tenetur harum, voluptatum quibusdam veniam sed expedita
+    atque quae et! Cupiditate totam quae ducimus ullam, ea blanditiis perferendis aspernatur placeat.
+    <script src="messageBox.js"></script>
+    <script>
+      pcsMessageBox('This is a test of the emergency broadcast system');
+
+      const msgTextInput = document.querySelector('#msgText');
+      const modal = document.querySelector('#modal');
+      document.querySelector('#addMsg').addEventListener('click', () => {
+        pcsMessageBox(msgTextInput.value, modal.checked);
+      });
+    </script>
+  </body>
+</html>
