@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="clock.css">
+    <style>
+      .clock {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PCS Clock</h1>
+    <h2>The amazing PCS clock!</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsa ullam doloribus architecto, sit tempora aliquid iusto, quos laboriosam eligendi fugit sequi id vel impedit labore et odio incidunt consequuntur!
+    <div id="clockGoesHere"></div>
+    <h5>&copy;copyright PCS 2024</h5>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="clock.js"></script>
+    <script>
+      //window.pcs.clock(document.querySelector('#clockGoesHere'));
+      window.pcs.clock('#clockGoesHere');
+      window.pcs.clock();
+    </script>
+  </body>
+</html>
