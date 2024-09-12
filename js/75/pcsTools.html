@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /*h1 {
+        color: teal;
+      }
+
+      h1:hover {
+        color: forestgreen;
+      }*/
+    </style>
+  </head>
+  <body>
+    <h1 id="donald">Donald Trump</h1>
+
+    <h1 id="kamala">Kamala Harris</h1>
+
+    <script src="pcsTools.js"></script>
+    <script>
+      const donald = pcs('#donald');
+      donald.foo = 25;
+      donald.css('color', 'green');
+      console.log(donald.css('color'));
+
+      donald.css('position', 'absolute');
+      donald.css('bottom', '100px');
+
+      // let clicks = 0;
+      donald.click(() => {
+        // console.log(`donald was clicked ${++clicks} times`);
+        const currentClicks = (donald.data('clicks') || 0) + 1;
+        donald.data('clicks', currentClicks)
+        console.log(`donald was clicked ${currentClicks} times`);
+
+        donald.css('bottom', 0);
+      });
+      //.data('clicks', 0);
+
+      setTimeout(() => {
+        donald.hide();
+      }, 2000);
+
+      setTimeout(() => {
+        donald.show();
+      }, 4000);
+
+      donald.on('mouseenter', () => console.log('mouse is on donald'));
+      donald.on('mouseleave', () => console.log('mouse is no longer on donald'));
+
+      donald.sparkle('slowly', 10000);
+
+      const kamala = pcs('#kamala')
+        .css('font-family', 'cursive')
+        .css('font-size', '4em')
+        .css('color', 'teal')
+        .on('mouseenter', () => console.log('mouse entered Kamala'))
+        .sparkle(1000, 3000)
+        .data('foo', 'bar')
+        .click(() => console.log('kamala was clicked'));
+
+      pcs('h1').css('background-color', 'red');
+      console.log(donald.foo);
+      console.log(kamala.data('foo'));
+      ///////
+
+      const anotherDonald = pcs('h1'); //#donald'); //
+      console.log(anotherDonald.foo);
+
+      setInterval(() => {
+        console.log(`donalds clicks is ${donald.data('clicks')} anotherDonalds clicks is ${anotherDonald.data('clicks')}`);
+      }, 1000);
+
+      kamala.data('innerHTML', '<button>I am a button</button>');
+
+    </script>
+  </body>
+</html>
