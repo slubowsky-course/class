@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #sidebar {
+        width: 25%;
+        float: left;
+        padding: 1em;
+        box-sizing: border-box;
+        border: 1px solid black;
+      }
+
+      video {
+        width: 75%;
+        height: 600px;
+      }
+
+      #sidebar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      #sidebar li {
+        border: 1px solid black;
+        margin-bottom: 1em;
+        cursor: pointer;
+      }
+
+      #sidebar li span {
+        width: 150px;
+        display: inline-block;
+        padding-left: 1em;
+      }
+
+      #sidebar img {
+        width: 200px;
+        height: 150px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sidebar">
+      <ul></ul>
+    </div>
+    <video controls autoplay></video>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="videos.js"></script>
+  </body>
+</html>
