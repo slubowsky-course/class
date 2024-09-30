@@ -4,7 +4,7 @@
 
   const { Map/*, StreetViewPanorama*/, InfoWindow } = await google.maps.importLibrary('maps');
   const { AdvancedMarkerElement } = await google.maps.importLibrary('marker');
-  const { DrawingManager } = await google.maps.importLibrary('drawing')
+  const { DrawingManager } = await google.maps.importLibrary('drawing');
 
   const bmg = { lat: 40.096435526114426, lng: -74.22148623738576 };
   const geoNamesApiKey = 'slubowsky';
