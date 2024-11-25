@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Chulent",
+    "ingredients": ["meat", "potatoes", "all sorts of beans"],
+    "directions": ["put ingredients in pot", "add spices", "cook"]
+  },
+  {
+    "name": "Macaroni",
+    "ingredients": ["macaroni", "cheese", "salt"],
+    "directions": ["put ingredients in pot", "add water", "cook"]
+  }
+]
