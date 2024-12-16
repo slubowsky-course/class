@@ -1,0 +1,17 @@
+header {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.active {
+  text-decoration: underline;
+  color: red;
+}
+
+/*a.myIsActive {
+  text-decoration: underline;
+  color: red;
+}*.
