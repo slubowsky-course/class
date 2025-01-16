@@ -1,0 +1,22 @@
+.post {
+  margin-bottom: 1em;
+}
+
+.post .title {
+  font-style: italic;
+}
+
+.commentsArea {
+  border: 1px solid black;
+  font-size: .8em;
+}
+
+.comments {
+  transition: max-height 1s;
+  overflow: hidden;
+  max-height: 350px;
+}
+
+.comments.closed {
+  max-height: 0;
+}
