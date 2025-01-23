@@ -1,0 +1,17 @@
+{
+  "name": "101",
+  "version": "1.0.0",
+  "main": "httpClient.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bl": "^6.0.18",
+    "connect": "^3.7.0"
+  },
+  "xtype": "module"
+}
