@@ -22,23 +22,23 @@ app.use((req, res, next) => {
 });
 
 app.use('/index.html', (req, res, next) => {
-  res.write('<h1>Hello from connect. This is index</h1>');
-  next();
+  res./*write*/end('<h1>Hello from connect. This is index</h1>');
+  // next();
 });
 
 app.use('/about.html', (req, res, next) => {
-  res.write('<h2>This is about</h2>');
-  next();
-});
-
-app.use((req, res, next) => {
-  res.write('<h4>404 - page not found</h4>');
-  next();
-});
-
-app.use((req, res, next) => {
-  res.end('<h5>Copyright &copy; PCS 2025</h5>');
+  res./*write*/end('<h2>This is about</h2>');
   // next();
 });
+
+app.use((req, res, next) => {
+  res./*write*/end('<h4>404 - page not found</h4>');
+  next();
+});
+
+/*app.use((req, res, next) => {
+  res.end('<h5>Copyright &copy; PCS 2025</h5>');
+  // next();
+});*/
 
 app.listen(80);
