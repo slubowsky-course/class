@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <p>Welcome to {{ title }}</p>
+    <hr/>
+    <ul>
+      {{#presidents}}
+      <li>{{name}}</li>
+      {{/presidents}}
+    </ul>
+
+    {{#noFavoritePresident}}
+    <h1>All presidents are bad, I have no favorite</h1>
+    {{/noFavoritePresident}}
+
+    {{#favoritePresident}}
+    <p>My Favorite president is: {{name}}</p>
+    {{/favoritePresident}}
+
+    {{#colors}}
+    <li>{{.}}</li>
+    {{/colors}}
+
+  </body>
+</html>
