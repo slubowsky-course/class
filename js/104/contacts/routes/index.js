@@ -1,7 +1,8 @@
-var express = require('express');
-var router = express.Router();
-const pool = require('../pool.js');
-var debug = require('debug')('contacts:index');
+import express from 'express';
+const router = express.Router();
+import pool from '../pool.js';
+import debugLib from 'debug';
+const debug = debugLib('contacts:index');
 
 router.get('/', async (req, res, next) => {
   try {
@@ -134,4 +135,4 @@ router./*post*/get('/deleteContact/:id', async (req, res, next) => {
   }
 });
 
-module.exports = router;
+export default router;

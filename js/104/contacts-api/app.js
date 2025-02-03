@@ -1,12 +1,13 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+import createError from 'http-errors';
+import express from 'express';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
+import contactsRouter from './routes/contacts.js';
 
-var contactsRouter = require('./routes/contacts');
+const app = express();
 
-var app = express();
+const __dirname = import.meta.dirname;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -36,4 +37,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+export default app;
