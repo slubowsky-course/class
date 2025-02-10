@@ -1,0 +1,8 @@
+<form method="POST" action="login">
+  <input name="username" required placeholder="username"/>
+  <input name="password" type="password" placeholder="password" required/>
+  <button>login</button>
+</form>
+
+<h1>{{ title }}</h1>
+<p>Welcome to {{ title }}</p>
