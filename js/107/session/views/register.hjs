@@ -1,0 +1,5 @@
+<form method="POST">
+  <input name="username" required placeholder="username" />
+  <input name="password" type="password" placeholder="password" required />
+  <button>register</button>
+</form>
