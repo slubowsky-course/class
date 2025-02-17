@@ -1,0 +1,9 @@
+<h1>{{ title }}</h1>
+
+{{#items}}
+
+{{id}} {{name}} {{description}}
+{{price}}
+<img src="{{picture}}" alt="{{name}}"/>
+
+{{/items}}
