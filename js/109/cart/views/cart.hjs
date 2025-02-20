@@ -1,0 +1,34 @@
+<table class="table table-striped">
+  {{#hasItems}}
+    <thead>
+      <th>name</th>
+      <th>price</th>
+      <th>quantity</th>
+      <th>subtotal</th>
+    </thead>
+  {{/hasItems}}
+  <tbody>
+
+    {{^items}}
+      <tr><td colspan="4">Your cart is empty. Fill it <a href="/">here</a></td></tr>
+    {{/items}}
+
+    {{#items}}
+    <tr>
+      <td>{{item.name}}</td>
+      <td>{{item.price}}</td>
+      <td>{{quantity}}</td>
+      <td>{{subtotal}}</td>
+    </tr>
+    {{/items}}
+  </tbody>
+
+  {{#hasItems}}
+  <tfoot>
+    <tr class="fw-bold">
+      <td colspan="3">total</td>
+      <td>{{total}}</td>
+    </tr>
+  </tfoot>
+  {{/hasItems}}
+</table>
