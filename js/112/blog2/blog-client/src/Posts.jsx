@@ -21,6 +21,7 @@ export default function Posts() {
   }, []);
 
   useEffect(() => {
+    // better connect once, save "on" handler, and then call "off" with it in cleanup (see next class)
     const socketIo = io('http://localhost:8080');
 
     socketIo.on('post', post => {

@@ -1,6 +1,7 @@
 import express from 'express';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import Joi from 'joi';
+import User from '../models/User.js';
 
 const userSchema = Joi.object({
   username: Joi.string()
@@ -15,14 +16,9 @@ const userSchema = Joi.object({
 
 const router = express.Router();
 
-router.use((req, res, next) => {
-  req.users = req.database.collection('users');
-  next();
-});
-
 router.post('/login', async (req, res, next) => {
   try {
-    const result = await req.users.findOne({ username: req.body.username });
+    const result = await User.findOne({ username: req.body.username });
     console.log(result);
 
     if (!result) {
@@ -54,12 +50,8 @@ router.post('/register', async (req, res, next) => {
 
     const hash = await bcrypt.hash(password, 10);
 
-    const results = await req.users.insertOne({
-      username: req.body.username,
-      password: hash
-    });
-
-    console.log(results);
+    const user = new User({username: req.body.username, password: hash});
+    user.save();
 
     res.statusCode = 201;
     res.end();

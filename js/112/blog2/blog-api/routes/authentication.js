@@ -59,7 +59,6 @@ router.post('/register', async (req, res, next) => {
 
     next(e);
   }
-  next();
 });
 
 router.get('/logout', (req, res, next) => {
