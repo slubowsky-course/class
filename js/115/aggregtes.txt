@@ -1,0 +1,588 @@
+Microsoft Windows [Version 10.0.26100.3476]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\slubo>mongosh
+Current Mongosh Log ID: 67d21b0b53ceebc27ffa4213
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.4.0
+Using MongoDB:          7.0.16
+Using Mongosh:          2.4.0
+mongosh 2.4.2 is available for download: https://www.mongodb.com/try/download/shell
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2025-03-12T19:20:12.990-04:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+1 test>use recipes
+switched to db recipes
+2 recipes>show collection
+MongoshInvalidInputError: [COMMON-10001] 'collection' is not a valid argument for "show".
+3 recipes>show collections
+recipes
+4 recipes>db.recipes.find()
+[
+  {
+    _id: ObjectId('67cdbd0fb6a1f919c8fa4214'),
+    recipe: 'Macaroni',
+    author: 'John Doe',
+    likes: 250,
+    dislikes: 2,
+    type: 'Italian'
+  },
+  {
+    _id: ObjectId('67cdbd0fb6a1f919c8fa4215'),
+    recipe: 'Spaghetti',
+    author: 'Jane Doe',
+    likes: 123,
+    dislikes: 34,
+    type: 'Italian'
+  },
+  {
+    _id: ObjectId('67cdbd0fb6a1f919c8fa4216'),
+    recipe: 'Hot Dog',
+    author: 'John Doe',
+    likes: 321,
+    dislikes: 1,
+    type: 'American'
+  },
+  {
+    _id: ObjectId('67cdbd0fb6a1f919c8fa4217'),
+    recipe: 'Steak',
+    author: 'Jane Doe',
+    likes: 111,
+    dislikes: 27,
+    type: 'American'
+  },
+  {
+    _id: ObjectId('67cdbd0fb6a1f919c8fa4218'),
+    recipe: 'Chulent',
+    author: 'John Doe',
+    likes: 30000,
+    dislikes: 2,
+    type: 'Jewish'
+  },
+  {
+    _id: ObjectId('67cdbd0fb6a1f919c8fa4219'),
+    recipe: 'Burger',
+    author: 'John Doe',
+    likes: 998,
+    dislikes: 6,
+    type: 'American'
+  }
+]
+5 recipes>db.recipes.find({author: 'John Doe'}).count(*)
+Uncaught:
+SyntaxError: Unexpected token (1:44)
+
+> 1 | db.recipes.find({author: 'John Doe'}).count(*)
+    |                                             ^
+  2 |
+
+6 recipes>db.recipes.find({author: 'John Doe'}).count()
+4
+7 recipes>db.recipes.find({author: 'Jane Doe'}).count()
+2
+8 recipes>db.recipes.aggregate({
+... $group: {
+...
+AbortController                   AbortSignal                       AggregateError
+Array                             ArrayBuffer                       Atomics
+BSONRegExp                        BSONSymbol                        BigInt
+BigInt64Array                     BigUint64Array                    BinData
+Binary                            Blob                              Boolean
+BroadcastChannel                  Buffer                            ByteLengthQueuingStrategy
+Code                              CompressionStream                 CountQueuingStrategy
+Crypto                            CryptoKey                         CustomEvent
+DBQuery                           DBRef                             DOMException
+DataView                          Date                              Decimal128
+DecompressionStream               Double                            EJSON
+Error                             EvalError                         Event
+EventTarget                       File                              FinalizationRegistry
+Float32Array                      Float64Array                      FormData
+Function                          Headers                           HexData
+ISODate                           Infinity                          Int16Array
+Int32                             Int32Array                        Int8Array
+Intl                              JSON                              Long
+MD5                               Map                               Math
+MaxKey                            MessageChannel                    MessageEvent
+MessagePort                       MinKey                            Mongo
+MongoshAsyncWriterError           NaN                               Number
+NumberDecimal                     NumberInt                         NumberLong
+Object                            ObjectId                          Performance
+PerformanceEntry                  PerformanceMark                   PerformanceMeasure
+PerformanceObserver               PerformanceObserverEntryList      PerformanceResourceTiming
+Promise                           Proxy                             RangeError
+ReadableByteStreamController      ReadableStream                    ReadableStreamBYOBReader
+ReadableStreamBYOBRequest         ReadableStreamDefaultController   ReadableStreamDefaultReader
+ReferenceError                    Reflect                           RegExp
+Request                           Response                          Set
+SharedArrayBuffer                 String                            SubtleCrypto
+Symbol                            SyntaxError                       TextDecoder
+TextDecoderStream                 TextEncoder                       TextEncoderStream
+Timestamp                         TransformStream                   TransformStreamDefaultController
+TypeError                         TypedArray                        URIError
+URL                               URLSearchParams                   UUID
+Uint16Array                       Uint32Array                       Uint8Array
+Uint8ClampedArray                 WeakMap                           WeakRef
+WeakSet                           WebAssembly                       WritableStream
+WritableStreamDefaultController   WritableStreamDefaultWriter       _
+_arrayLikeToArray                 _arrayWithHoles                   _error
+_iterableToArrayLimit             _nonIterableRest                  _print
+_slicedToArray                    _unsupportedIterableToArray       _untrackedShow
+assert                            async_hooks                       atob
+bsonsize                          btoa                              buffer
+buildInfo                         child_process                     clearImmediate
+clearInterval                     clearTimeout                      cls
+cluster                           cmdCount                          config
+connect                           console                           constants
+convertShardKeyToHashed           crypto                            db
+decodeURI                         decodeURIComponent                dgram
+diagnostics_channel               disableTelemetry                  dns
+domain                            edit                              enableTelemetry
+encodeURI                         encodeURIComponent                escape
+eval                              events                            exit
+fetch                             fs                                global
+globalThis                        help                              history
+http                              http2                             https
+inspector                         isFinite                          isInteractive
+isNaN                             it                                load
+log                               module                            net
+origArraySort                     origFptS                          origTypedArraySort
+os                                parseFloat                        parseInt
+passwordPrompt                    path                              perf_hooks
+performance                       print                             printjson
+process                           prompt                            punycode
+querystring                       queueMicrotask                    quit
+readline                          repl                              require
+rs                                sayHi                             setImmediate
+setInterval                       setTimeout                        sh
+show                              sleep                             snippet
+sp                                stream                            string_decoder
+structuredClone                   sys                               timers
+tls                               trace_events                      tty
+undefined                         unescape                          url
+use                               util                              v8
+version                           vm                                wasi
+worker_threads                    zlib
+
+__proto__                         constructor                       hasOwnProperty
+isPrototypeOf                     propertyIsEnumerable              toLocaleString
+toString                          valueOf
+
+...
+10 recipes>db.recipes.aggregate({
+... $group: {
+...     _id: '$author',
+...     num_recipes: {$sum: 1}
+... }
+... })
+[
+  { _id: 'Jane Doe', num_recipes: 2 },
+  { _id: 'John Doe', num_recipes: 4 }
+]
+16 recipes>db.recipes.aggregate({ $group: { _id: '$author', num_likes: { $sum: '$likes'}, num_dislikes: {$sum: '$dislikes' }}})
+[
+  { _id: 'Jane Doe', num_likes: 234, num_dislikes: 61 },
+  { _id: 'John Doe', num_likes: 31569, num_dislikes: 11 }
+]
+17 recipes>db.recipes.aggregate({match: { type: 'American'}}, { $group: { _id: '$author', num_likes: { $sum: '$likes'}, num_dislikes: {$sum: '$dislikes' }}})
+MongoServerError[Location40324]: Unrecognized pipeline stage name: 'match'
+18 recipes>db.recipes.aggregate({$match: { type: 'American'}}, { $group: { _id: '$author', num_likes: { $sum: '$likes'}, num_dislikes: {$sum: '$dislikes' }}})
+[
+  { _id: 'Jane Doe', num_likes: 111, num_dislikes: 27 },
+  { _id: 'John Doe', num_likes: 1319, num_dislikes: 7 }
+]
+19 recipes>db.recipes.aggregate({$match: { type: 'American'}}, { $group: { _id: '$author', num_likes: { $sum: '$likes'}, num_dislikes: {$sum: '$dislikes' }}, {$sort: { num_likes: 1}}})
+Uncaught:
+SyntaxError: Unexpected token (1:147)
+
+> 1 | db.recipes.aggregate({$match: { type: 'American'}}, { $group: { _id: '$author', num_likes: { $sum: '$likes'}, num_dislikes: {$sum: '$dislikes' }}, {$sort: { num_likes: 1}}})
+    |                                                                                                                                                    ^
+  2 |
+
+20 recipes>db.recipes.aggregate({$match: { type: 'American'}}, { $group: { _id: '$author', num_likes: { $sum: '$likes'}, num_dislikes: {$sum: '$dislikes' }}}, {$sort: { num_likes: 1}}})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:172)
+
+> 1 | db.recipes.aggregate({$match: { type: 'American'}}, { $group: { _id: '$author', num_likes: { $sum: '$likes'}, num_dislikes: {$sum: '$dislikes' }}}, {$sort: { num_likes: 1}}})
+    |                                                                                                                                                                             ^
+  2 |
+
+21 recipes>db.recipes.aggregate({$match: { type: 'American'}}, { $group: { _id: '$author', num_likes: { $sum: '$likes'}, num_dislikes: {$sum: '$dislikes' }}}, {$sort: { num_likes: 1}})
+[
+  { _id: 'Jane Doe', num_likes: 111, num_dislikes: 27 },
+  { _id: 'John Doe', num_likes: 1319, num_dislikes: 7 }
+]
+22 recipes>db.recipes.aggregate({$match: { type: 'American'}}, { $group: { _id: '$author', num_likes: { $sum: '$likes'}, num_dislikes: {$sum: '$dislikes' }}}, {$sort: { num_likes: -1}})
+[
+  { _id: 'John Doe', num_likes: 1319, num_dislikes: 7 },
+  { _id: 'Jane Doe', num_likes: 111, num_dislikes: 27 }
+]
+23 recipes>use blog
+switched to db blog
+24 blog>db.posts.aggregate({
+... $lookup: {
+...     from: 'the_author',
+...     localfield: 'author',
+...
+28 blog>
+
+29 blog>
+
+30 blog>
+
+31 blog>
+
+32 blog>db.posts.aggregate({
+... ... $lookup: {
+... ...     from: 'users',
+Uncaught:
+SyntaxError: Unexpected token, expected "," (2:11)
+
+  1 | db.posts.aggregate({
+> 2 | ... $lookup: {
+    |            ^
+  3 | ...     from: 'users',
+  4 |
+
+33 blog>db.posts.aggregate({
+... ... $lookup: {
+... ...     from: 'users',
+Uncaught:
+SyntaxError: Unexpected token, expected "," (2:11)
+
+  1 | db.posts.aggregate({
+> 2 | ... $lookup: {
+    |            ^
+  3 | ...     from: 'users',
+  4 |
+
+34 blog>db.posts.aggregate({
+...    $lookup: {
+...       from: 'users',
+...       localfield: 'author',
+...       foreignfield: 'username',
+...       as: 'the_author'
+...    }
+... })
+MongoServerError[FailedToParse]: unknown argument to $lookup: localfield
+35 blog>db.posts.aggregate({
+...    $lookup: {
+...       from: 'users',
+...       localField: 'author',
+...       foreignField: 'username',
+...       as: 'the_author'
+...    }
+... })
+[
+  {
+    _id: ObjectId('67bfd6701f20595cf8fa4214'),
+    title: 'DOGE is great',
+    author: 'Elon',
+    date: ISODate('2025-02-27T03:05:20.107Z'),
+    body: 'Its saving millions of dollars!',
+    comments: [
+      {
+        body: 'Its big!',
+        date: ISODate('2025-03-10T00:49:29.887Z'),
+        author: 'Donald'
+      },
+      {
+        body: 'really big!',
+        date: ISODate('2025-03-10T00:52:49.871Z'),
+        author: 'JD'
+      },
+      {
+        body: 'another test',
+        date: ISODate('2025-03-10T00:59:07.865Z'),
+        author: 'Donald'
+      },
+      {
+        body: 'test',
+        date: ISODate('2025-03-10T02:33:36.840Z'),
+        author: 'TEST',
+        _id: ObjectId('67ce4f80f9278cd24667ac72')
+      }
+    ],
+    __v: 1,
+    the_author: []
+  },
+  {
+    _id: ObjectId('67bfd69f1f20595cf8fa4215'),
+    title: 'Tesla is great',
+    author: 'Also Elon',
+    date: ISODate('2025-02-27T03:06:07.707Z'),
+    body: 'Its making millions of dollars!',
+    the_author: []
+  },
+  {
+    _id: ObjectId('67c4fc1c0ff18458f0e29453'),
+    title: 'First post from UI',
+    body: 'This is a post from the UI',
+    date: ISODate('2025-03-03T00:47:24.159Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('67c523082293dd5d5cdf524e'),
+        username: 'Donald',
+        password: '$2b$10$ZLv0XK76IuqdZZ6xrYn09uK3yPNpbG7WNht1E.vCgrMDBIo5zq3ee'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('67c4fc510ff18458f0e29454'),
+    title: '#2',
+    body: 'post #2',
+    date: ISODate('2025-03-03T00:48:17.265Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('67c523082293dd5d5cdf524e'),
+        username: 'Donald',
+        password: '$2b$10$ZLv0XK76IuqdZZ6xrYn09uK3yPNpbG7WNht1E.vCgrMDBIo5zq3ee'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('67c4fc710ff18458f0e29455'),
+    title: '#3',
+    body: 'yet another post',
+    date: ISODate('2025-03-03T00:48:49.135Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('67c523082293dd5d5cdf524e'),
+        username: 'Donald',
+        password: '$2b$10$ZLv0XK76IuqdZZ6xrYn09uK3yPNpbG7WNht1E.vCgrMDBIo5zq3ee'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('67c5156bdfd95043e42d27f9'),
+    title: 'Will it work?',
+    body: 'Yes it will!',
+    date: ISODate('2025-03-03T02:35:23.675Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('67c523082293dd5d5cdf524e'),
+        username: 'Donald',
+        password: '$2b$10$ZLv0XK76IuqdZZ6xrYn09uK3yPNpbG7WNht1E.vCgrMDBIo5zq3ee'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('67c519c9752f042c8adcceb9'),
+    title: 'another new one',
+    body: 'yet another one',
+    date: ISODate('2025-03-03T02:54:01.123Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('67c523082293dd5d5cdf524e'),
+        username: 'Donald',
+        password: '$2b$10$ZLv0XK76IuqdZZ6xrYn09uK3yPNpbG7WNht1E.vCgrMDBIo5zq3ee'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('67c51a50752f042c8adcceba'),
+    title: 'z',
+    body: 'z',
+    date: ISODate('2025-03-03T02:56:16.986Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('67c523082293dd5d5cdf524e'),
+        username: 'Donald',
+        password: '$2b$10$ZLv0XK76IuqdZZ6xrYn09uK3yPNpbG7WNht1E.vCgrMDBIo5zq3ee'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('67c51aeb752f042c8adccebb'),
+    title: 'y',
+    body: 'y',
+    date: ISODate('2025-03-03T02:58:51.445Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('67c523082293dd5d5cdf524e'),
+        username: 'Donald',
+        password: '$2b$10$ZLv0XK76IuqdZZ6xrYn09uK3yPNpbG7WNht1E.vCgrMDBIo5zq3ee'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('67c51ba3f091c53278b410f4'),
+    title: 'x',
+    body: 'x',
+    date: ISODate('2025-03-03T03:01:55.700Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('67c523082293dd5d5cdf524e'),
+        username: 'Donald',
+        password: '$2b$10$ZLv0XK76IuqdZZ6xrYn09uK3yPNpbG7WNht1E.vCgrMDBIo5zq3ee'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('67c51bedf091c53278b410f5'),
+    title: 'w',
+    body: 'w',
+    date: ISODate('2025-03-03T03:03:09.487Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('67c523082293dd5d5cdf524e'),
+        username: 'Donald',
+        password: '$2b$10$ZLv0XK76IuqdZZ6xrYn09uK3yPNpbG7WNht1E.vCgrMDBIo5zq3ee'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('67c8fd395d8386d8cf144fe0'),
+    title: 'What a great speech!',
+    body: 'Was amazing',
+    date: ISODate('2025-03-06T01:41:13.752Z'),
+    author: null,
+    the_author: []
+  },
+  {
+    _id: ObjectId('67c8fd645d8386d8cf144fe1'),
+    title: 'What a great speech!',
+    body: 'Was amazing',
+    date: ISODate('2025-03-06T01:41:56.660Z'),
+    author: null,
+    the_author: []
+  },
+  {
+    _id: ObjectId('67c8fdee4d6becf7c38632d1'),
+    title: 'test',
+    body: '123',
+    date: ISODate('2025-03-06T01:44:14.856Z'),
+    author: null,
+    the_author: []
+  },
+  {
+    _id: ObjectId('67c8fe410e2993dab52b2965'),
+    title: 'test',
+    body: '123',
+    date: ISODate('2025-03-06T01:45:37.660Z'),
+    author: 'JD',
+    the_author: [
+      {
+        _id: ObjectId('67c8fd0c5d8386d8cf144fdf'),
+        username: 'JD',
+        password: '$2b$10$fGjxP3gx6UdncnNnIMA88Ol6Bn2WpuLy0ITkc/kEcjA9LryN6hRfq'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('67c8fe7c0e2993dab52b2966'),
+    title: 'test nit logged in',
+    body: '1232',
+    date: ISODate('2025-03-06T01:46:36.285Z'),
+    author: null,
+    comments: [
+      {
+        body: 'this is a comment',
+        date: ISODate('2025-03-10T02:14:43.934Z'),
+        author: 'JD',
+        _id: ObjectId('67ce4b13bd0b18d99f9b2f20')
+      }
+    ],
+    the_author: []
+  },
+  {
+    _id: ObjectId('67c90a3e50a3568221cc00ce'),
+    title: 'test',
+    body: '12345',
+    date: ISODate('2025-03-06T02:36:46.349Z'),
+    author: 'JD',
+    comments: [
+      {
+        body: 'this is a comment',
+        date: ISODate('2025-03-06T03:21:09.049Z'),
+        author: null
+      },
+      {
+        body: 'this is a comment',
+        date: ISODate('2025-03-06T03:21:31.543Z'),
+        author: null
+      },
+      {
+        body: 'this is a comment',
+        date: ISODate('2025-03-06T03:23:11.695Z'),
+        author: null
+      },
+      {
+        body: 'this is a comment',
+        date: ISODate('2025-03-06T03:26:56.834Z'),
+        author: null
+      },
+      {
+        body: 'this is a comment',
+        date: ISODate('2025-03-09T23:59:37.353Z'),
+        author: null
+      }
+    ],
+    the_author: [
+      {
+        _id: ObjectId('67c8fd0c5d8386d8cf144fdf'),
+        username: 'JD',
+        password: '$2b$10$fGjxP3gx6UdncnNnIMA88Ol6Bn2WpuLy0ITkc/kEcjA9LryN6hRfq'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('67ce4afdbd0b18d99f9b2f15'),
+    title: 'ABC',
+    author: 'JD',
+    body: '123',
+    comments: [
+      {
+        body: 'test',
+        date: ISODate('2025-03-10T02:26:57.214Z'),
+        author: 'JD',
+        _id: ObjectId('67ce4df106bb805c02845ad8')
+      }
+    ],
+    date: ISODate('2025-03-10T02:14:21.501Z'),
+    __v: 1,
+    the_author: [
+      {
+        _id: ObjectId('67c8fd0c5d8386d8cf144fdf'),
+        username: 'JD',
+        password: '$2b$10$fGjxP3gx6UdncnNnIMA88Ol6Bn2WpuLy0ITkc/kEcjA9LryN6hRfq'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('67ce4b55f930e5f65124acca'),
+    title: 'dfdg',
+    author: 'JD',
+    body: 'fgdfgdf',
+    comments: [
+      {
+        body: 'Test',
+        date: ISODate('2025-03-10T02:20:01.443Z'),
+        author: 'JD',
+        _id: ObjectId('67ce4c51f930e5f65124ace1')
+      }
+    ],
+    date: ISODate('2025-03-10T02:15:49.884Z'),
+    __v: 0,
+    the_author: [
+      {
+        _id: ObjectId('67c8fd0c5d8386d8cf144fdf'),
+        username: 'JD',
+        password: '$2b$10$fGjxP3gx6UdncnNnIMA88Ol6Bn2WpuLy0ITkc/kEcjA9LryN6hRfq'
+      }
+    ]
+  }
+]
+36 blog>
