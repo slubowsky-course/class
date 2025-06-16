@@ -1,0 +1,46 @@
+header {
+  text-align: center;
+  border: 8px solid red;
+  border-color: green;
+  /*border-style:dashed;*/
+  border-radius: 8px;
+}
+
+img {
+  border-radius: 100px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: gray;
+}
+
+/* hover pseudo-class */
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+a:focus {
+  color: blue;
+}
+
+a:active {
+  color: orange
+}
+
+/*html {
+  font-size: 62.5%;
+}
+
+article {
+  font-size: 2em;
+}
+
+p {
+  font-size: 3rem
+}*/
