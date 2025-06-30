@@ -1,0 +1,10 @@
+            id      class   type
+
+#toTop      1         0       0
+.special    0         1       0
+section     0         0       1
+
+
+section p   0         0       2
+p.special   0         1       1
+.one .two...0        11       0

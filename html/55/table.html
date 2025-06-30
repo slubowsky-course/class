@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        text-align: center;
+      }
+
+      table {
+        /*border: 1px solid black;*/
+        border-collapse: collapse;
+        width: 80%;
+        margin: auto;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      caption {
+        caption-side: bottom;;
+      }
+
+      td:not(:first-child) {
+        text-align: right;
+      }
+
+      td:first-child {
+        font-weight: bold;
+      }
+
+      tfoot {
+        color: red;
+      }
+
+      /*.even {
+        background-color: lightblue;
+      }*/
+
+      /*tbody tr:nth-child(2n) {
+        background-color: lightblue;
+      }
+
+      tbody tr:nth-child(2n+1) {
+        background-color: pink;
+      }*/
+
+      tbody tr:nth-child(even) {
+        background-color: lightblue;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: pink;
+      }
+
+      /*tbody tr:nth-child(-n+3) {
+        font-family: cursive;
+      }*/
+
+      table tr:hover {
+        background-color: aqua /*!important*/;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>PCS Classes</h1>
+    </header>
+
+    <table>
+      <caption>students attending</caption>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Software Development</th>
+          <th>Accounting</th>
+          <th>Networking</th>
+          <th>Real Estate</th>
+        </tr>
+      </thead>
+      <tbody>
+         <tr>
+          <td>2021</td>
+          <td>50</td>
+          <td>70</td>
+          <td>35</td>
+          <td>56</td>
+        </tr>
+         <tr>
+          <td>2022</td>
+          <td>50</td>
+          <td>70</td>
+          <td>35</td>
+          <td>56</td>
+        </tr>
+        <tr>
+          <td>2023</td>
+          <td>50</td>
+          <td>70</td>
+          <td>35</td>
+          <td>56</td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td>50</td>
+          <td>70</td>
+          <td>35</td>
+          <td>56</td>
+        </tr>
+         <tr>
+          <td>2025</td>
+          <td>50</td>
+          <td>70</td>
+          <td>35</td>
+          <td>56</td>
+        </tr>
+      </tbody>
+      <tfoot>
+          <tr>
+            <td>Total</td></td>
+            <td>150</td>
+            <td>444</td>
+            <td>333</td>
+            <td>222</td>
+          </tr>
+        </tfoot>
+    </table>
+  </body>
+</html>

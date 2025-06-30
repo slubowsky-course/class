@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    a {
+      background-repeat: no-repeat;
+      padding-left: 70px;
+      height: 64px;
+      display: inline-block;
+      line-height: 64px;
+    }
+
+    /* exact match
+    a[href="myResume.docx"] {
+      background-image: url("word.jpg");
+    } */
+
+    /* contains
+    a[href*=".doc"] {
+      background-image: url("word.jpg");
+    }*/
+
+    /* ends with
+    a[href$=".doc"], [href$=".docx"] {
+      background-image: url("word.jpg");
+    }
+
+    a[href$=".ppt"], [href$=".pptx"] {
+      background-image: url("powerpoint.jpg");
+    }*/
+
+    /* starts with
+    a[href^="myResume"] {
+      background-image: url("word.jpg");
+    }*/
+
+    a[data-pcs="5"] {
+      color: red;
+    }
+
+    a[data-pcs="6"] {
+      color: purple;
+    }
+
+    [pcs] {
+      color: green;
+    }
+
+  </style>
+  <body>
+    <ul>
+      <li><a href="myResume.docx" data-pcs="6">myResume.docx</a></li>
+      <li><a href="classNotes.doc" data-pcs="5">classNotes.doc</a></li>
+      <li><a href="myPresentation.doc.pptx" pcs>myPresentation.doc.pptx</a></li>
+    </ul>
+  </body>
+</html>

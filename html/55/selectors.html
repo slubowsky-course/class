@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* universal selector */
+      * {
+        margin-top: 1em;
+      }
+
+      /* type selector */
+      section {
+        color: red;
+        border: 5px solid black;
+      }
+
+      /* id selector */
+      #it {
+        font-family: cursive;
+      }
+
+      /* class selector */
+      .special {
+        font-style: italic;
+      }
+
+      /* multiple selectors */
+      .special,
+      p {
+        background-color: yellow;
+      }
+
+      /* descendent selectors */
+
+      /* combination selector */
+      .special p {
+        color: blue;
+      }
+
+      /* any child of .special */
+      .special * {
+        rotate: 2deg;
+      }
+
+      /* immediate descendent only */
+      .special > p {
+        rotate: -2deg;
+      }
+
+      /* sibling selectors */
+      /* immediate next sibling */
+      section + p {
+        text-decoration: underline;
+      }
+
+      /* see has selector for prev */
+
+      /* all next siblings even not immediate next */
+      section ~ p {
+        font-weight: bold;
+      }
+
+      /* not */
+      section:not(.special) {
+        border-color: green;
+      }
+
+      /* pseudo classes e.g */
+      .special:hover {
+        background-color: pink;
+      }
+
+      /* pseudo elements */
+      .special::first-letter {
+        font-size: 1.5em;
+      }
+
+      .special::first-line {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="it">Im a paragraph</p>
+    <section>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque consequuntur accusamus corrupti, repudiandae
+      deserunt quae nostrum vel molestias at ducimus exercitationem esse repellat vero quasi.
+    </section>
+    <section class="special">
+      Quos exercitationem deserunt magni vitae? Velit ullam dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aspernatur provident voluptas et, distinctio odit quae suscipit dicta. Quibusdam neque, fugiat impedit voluptatibus iusto sunt. Animi consequuntur a vel alias? Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae illo totam laborum eum aut possimus quasi voluptates blanditiis, velit labore at eligendi sapiente quidem in rem aliquid sit itaque quia.
+      <p>Im a p in a special.</p>
+      <div><p>Im a p in a div in a special</p></div>
+      <h5>Im a h5 in a special</h5>
+      accusantium eveniet error debitis obcaecati modi praesentium labore inventore officiis, ad nam quis optio corrupti
+      non id!
+    </section>
+    <p>Im also a p after a section</p>
+    <section>
+      Quaerat corporis dolorum dolor fugiat, quod doloremque aut obcaecati harum aliquam quo temporibus cupiditate minus
+      porro, iusto voluptatum. Quae molestiae, eaque rerum magni accusantium impedit!
+    </section>
+    <section>
+      Et doloribus molestias reprehenderit similique magni ea esse cum ducimus! Repellat eaque quis nihil quas sunt,
+      consequuntur, nesciunt odit eos laborum quaerat voluptas ipsa eligendi?
+    </section>
+    <section>
+      In, nobis! Dolores nemo placeat, quaerat numquam distinctio, labore fugiat fugit id cum sit similique beatae
+      asperiores nostrum maiores, deserunt sapiente earum eaque illum iure?
+    </section>
+    <p>Im p after the sections</p>
+    <p>Im also p after the sections</p>
+  </body>
+</html>
