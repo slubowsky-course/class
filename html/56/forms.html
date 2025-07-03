@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input:not([type='submit'], [type='radio'], [type='checkbox']),
+      textarea {
+        width: 100%;
+      }
+
+      textarea {
+        height: 10em;
+      }
+
+      datalist {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        writing-mode: vertical-lr;
+        width: 200px;
+      }
+
+      option {
+        padding: 0;
+      }
+
+      input[type='range'] {
+        width: 200px;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post" action="foo">
+      <label>
+        first name:
+        <input name="first" minlength="3" maxlength="10" required value="Donald" />
+      </label>
+      <label for="last">last name: </label>
+      <input id="last" name="last" />
+      password:
+      <input
+        type="password"
+        name="password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+        placeholder="enter password"
+      />
+
+      <label for="email">email:</label>
+      <input type="email" name="email" id="email" />
+
+      <label for="age">age:</label>
+      <input type="number" name="age" id="number" step="any" min="0" max="120" />
+
+      <label for="favcolor">favorite color:</label>
+      <input type="color" name="favcolor" id="favcolor" value="#FF0000" />
+
+      <label for="birthday">birthday:</label>
+      <input type="date" name="birthday" id="birthday" value="2000-01-01" />
+
+      <label for="telephone">telephone:</label>
+      <input type="tel" name="telephone" id="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+
+      <label for="rating">rating:</label>
+      <br />
+      <input type="range" name="rating" id="rating" min="1" max="5" list="stars" />
+
+      <datalist id="stars">
+        <option value="1" label="terrible"></option>
+        <option value="2" label="ok"></option>
+        <option value="3" label="decent"></option>
+        <option value="4" label="great"></option>
+        <option value="5" label="fantastic"></option>
+      </datalist>
+
+      <label for="comments">comments:</label>
+      <textarea name="comments" id="comments" placeholder="enter comment here">this is the comment</textarea>
+
+      <div>
+        <label
+          >candidate
+          <br />
+          <input type="radio" name="candidate" value="coumo" checked />Coumo
+          <input type="radio" name="candidate" value="mamdani" />Mamdani
+        </label>
+      </div>
+
+      <div>
+        <label for="drink">drinks</label>
+        <br />
+        <!--input type="checkbox" name="drink" value="pepsi"/>pepsi <input type="checkbox" name="drink" value="coke"/>coke
+        <input type="checkbox" name="drink" value="7up"/>7up-->
+
+        <input type="checkbox" name="pepsi" />pepsi <input type="checkbox" name="coke" checked />coke
+        <input type="checkbox" name="7up" />7up
+      </div>
+
+      <label for="state"></label>
+      <select name="state" id="state">
+        <option selected hidden>pick a state</option>
+        <option value="1">NY</option>
+        <option value="2">NJ</option>
+        <option>FL</option>
+      </select>
+
+
+      <input type="submit" value="submit it"/>
+
+      <input type="button" value="Im a button"/>
+
+      <button>this is also a submit button</button>
+
+      <button type="button">this is just a button</button>
+
+      <button type="button">
+        <img src="restaurant/images/steak.jpg" alt="">
+        Click the steak!
+      </button>
+
+      <input type="reset">
+      <button type="reset">Im also a reset</button>
+    </form>
+  </body>
+</html>
