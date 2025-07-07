@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .columns {
+        display: flex;
+        gap: 1em;
+      }
+
+      .columns section {
+        flex: 1;
+      }
+
+      .grid {
+        display: flex;
+        gap: 1em;
+
+        flex-wrap: wrap;
+      }
+
+      .grid section {
+        flex: 1 1 16em;
+      }
+
+      .with-sidebar {
+        display: flex;
+        gap: 1em;
+
+        flex-direction: column;
+      }
+
+      .with-sidebar aside {
+        /*flex: 1;*/
+        flex: 1 1 30%;
+        /*flex-basis: 30%;*/
+      }
+
+      .with-sidebar section {
+        /*flex: 3;*/
+        flex: 1 1 70%;
+        /*flex-basis: 70%;*/
+      }
+
+      @media (600px <= width) {
+        .with-sidebar {
+          /*display: flex;*/
+          gap: 1em;
+
+          flex-direction: row;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>home</li>
+        <li>menu</li>
+        <li>about us</li>
+        <li>contact us</li>
+      </ul>
+    </nav>
+    <hr />
+    <article class="columns">
+      <section>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae illo ipsa magnam blanditiis sunt nostrum, ut
+        doloribus consequatur numquam officia consequuntur inventore deserunt. Cumque, deserunt. Laborum nisi ex totam
+        vitae?
+      </section>
+      <section>
+        Repellendus ea nihil quibusdam pariatur molestias vero sunt. Optio, nisi, dignissimos temporibus neque corporis
+        asperiores ratione rem quia magni tenetur ullam quod veritatis minima dolores, nemo aliquid hic distinctio Lorem
+        ipsum, dolor sit amet consectetur adipisicing elit. Veniam voluptatem perspiciatis nemo a dolorum hic eligendi
+        quam sed enim mollitia nisi ipsa quis beatae iusto, doloremque repellat inventore iure! Quibusdam. laudantium?
+      </section>
+      <section>
+        Fugiat voluptatibus saepe illo excepturi quod pariatur, exercitationem amet voluptates voluptatum cupiditate
+        porro minus totam sit ratione hic veniam nobis rem id. Temporibus molestiae amet eveniet expedita accusantium
+        atque rerum.
+      </section>
+    </article>
+    <hr />
+    <article class="grid">
+      <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem error unde quasi soluta. Ratione possimus facere
+        perspiciatis molestias, facilis enim quaerat vitae corporis voluptas quod veniam ea, praesentium eius maxime!
+      </section>
+      <section>
+        Repellendus modi exercitationem ratione similique blanditiis facilis consequatur consectetur aut qui, porro
+        fugit esse quis nulla quia quidem possimus adipisci. Ex saepe harum animi quod iste veritatis provident ratione
+        a.
+      </section>
+      <section>
+        Assumenda eveniet nam illum officia itaque et, debitis natus quo pariatur corporis quisquam consequatur deleniti
+        dignissimos quam omnis expedita amet alias facilis hic officiis? Ipsa ducimus ea illo optio. Eligendi!
+      </section>
+      <section>
+        Corporis error, architecto est expedita modi magni atque odit vero dolor molestias facere eos beatae. Rem nemo
+        dolorum blanditiis nobis veniam! Labore architecto quibusdam quos eligendi, excepturi dolorem dolor doloremque?
+      </section>
+      <section>
+        Ratione nihil nisi architecto, voluptates alias at fugit aliquam ullam ipsa, labore quidem in reprehenderit
+        iste? Harum nisi pariatur rerum enim, voluptatibus quaerat distinctio labore saepe eius corrupti reiciendis
+        reprehenderit.
+      </section>
+    </article>
+
+    <hr />
+
+    <article class="with-sidebar">
+      <aside>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quis illum, in necessitatibus consequatur
+        voluptas quos quidem aut dicta repudiandae saepe quasi, commodi nemo nesciunt mollitia, maxime eos quam
+        assumenda.
+      </aside>
+      <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nostrum dolor praesentium possimus asperiores
+        sed! Et repellat ipsum laboriosam doloremque soluta illo porro ducimus saepe fuga nemo! Similique, blanditiis
+        quasi non necessitatibus labore soluta voluptatum. Ipsum illum nam omnis! Ea iure sed, deserunt cum consequuntur
+        ex sapiente blanditiis eligendi esse, in nemo aut veniam molestias natus, doloribus consectetur saepe dolore
+        quia fuga nulla. Ducimus, soluta earum ut neque blanditiis ullam sint delectus quis. Asperiores, totam quod quia
+        nulla temporibus inventore impedit assumenda sequi tempora accusantium optio quis eius perferendis fugit qui.
+        Ratione, molestiae. Ad exercitationem, ratione explicabo expedita asperiores sit.
+      </section>
+    </article>
+  </body>
+</html>

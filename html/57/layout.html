@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        gap: 1em;
+
+        grid-template-columns: [start] 1fr [end];
+      }
+
+      header, footer {
+        grid-column: start / end;
+      }
+
+      @media (600px <= width) {
+        body {
+          grid-template-columns: [start] 1fr [middle] 2fr [end];
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>header - Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, est.</header>
+    <aside>
+      aside - Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ipsa delectus culpa distinctio
+      asperiores pariatur voluptas eos, reiciendis sapiente veritatis corrupti laudantium vel, eveniet dolorum.
+    </aside>
+    <article>
+      article - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam maiores quis nihil sunt quia
+      molestias. Molestias, similique blanditiis. Maiores amet quos harum ullam asperiores id, esse consequatur
+      accusamus nostrum nesciunt reiciendis incidunt vero nemo adipisci aspernatur accusantium natus voluptas dolor
+      error? Quo ipsam vero tenetur explicabo quaerat? Totam animi odit impedit officiis sapiente nobis nisi excepturi
+      optio! Voluptatum corrupti necessitatibus similique veniam assumenda voluptatem doloremque vitae, eum, quibusdam
+      expedita atque eaque provident. Ut magnam repellat tempora. Repudiandae provident quod cupiditate, consequatur
+      vitae optio dicta molestias illo molestiae at cumque ut ab numquam ducimus doloribus voluptatum? Aut assumenda
+      odit doloribus praesentium.
+    </article>
+    <footer>footer - Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, nam.</footer>
+  </body>
+</html>
