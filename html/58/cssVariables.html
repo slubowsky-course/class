@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        --bg-color: lightgray;
+        --default-margin: 1em;
+        --foo: cursive;
+      }
+
+      header {
+        background-color: var(--bg-color);
+        margin: var(--default-margin);
+        font-family: var(--foo);
+      }
+
+      aside {
+        background-color: var(--bg-color);
+        margin: var(--default-margin);
+      }
+
+      article {
+        background-color: var(--bg-color);
+        margin: var(--default-margin);
+      }
+
+      footer {
+        background-color: var(--bg-color);
+        margin: var(--default-margin);
+      }
+
+      header {
+        /*transition-duration: 2s;
+        transition-property: font-size;*/
+      }
+
+      header:hover {
+        font-size: 2em;
+        /*transition-delay: 2s;*/
+
+        color: red;
+
+        transition: font-size 2s ease-in-out 2s;
+      }
+
+      .box {
+        border: 1px solid black;
+        background-color: yellow;
+        width: 200px;
+        height: 200px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        transition-duration: 2s;
+      }
+
+      .box:hover {
+        width: 400px;
+        height: 400px;
+        rotate: 180deg;
+        background-color: lightblue;
+      }
+
+      article::before {
+        content: 'before';
+        display: block;
+      }
+
+      article::after {
+        content: 'after';
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header title="Im a header">header</header>
+    <aside>aside</aside>
+    <article>article</article>
+    <footer>footer</footer>
+
+    <div class="box">Hi!!!</div>
+  </body>
+</html>

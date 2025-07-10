@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        gap: 1em;
+
+        grid-template-areas:
+          'header'
+          'sidebar'
+          'main'
+          'footer';
+      }
+
+      header {
+        grid-area: header;
+      }
+
+      aside {
+        grid-area: sidebar;
+      }
+
+      article {
+        grid-area: main;
+      }
+
+      footer {
+        grid-area: footer;
+      }
+
+      @media (600px <= width) {
+        body {
+          grid-template-areas:
+            'header  header'
+            'sidebar main'
+            'footer  footer';
+        }
+      }
+
+      @media (800px <= width) {
+        body {
+          grid-template-areas:
+            '. header  header .'
+            '. sidebar main   .'
+            '. footer  footer .';
+
+          grid-template-columns: 1fr 1fr 2fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>header - Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nisi. lorem5</header>
+    <aside>
+      aside - Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, modi, et corporis praesentium pariatur
+      sapiente esse, odio quos animi eligendi ab hic amet sint rem?
+    </aside>
+    <article>
+      article Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat velit dolores, beatae accusamus ut illo
+      rerum! Corporis neque eaque qui animi blanditiis at est sed impedit odit consequatur, earum sit, consequuntur
+      inventore? Et nesciunt ipsa atque reprehenderit ab! Voluptatum fugiat deserunt quaerat illum alias adipisci
+      placeat! Voluptatem architecto autem vel unde, dolore aspernatur laudantium magnam quibusdam eius sed tempora
+      numquam cumque repudiandae voluptate repellendus qui. Mollitia doloribus, minima magnam quos totam nulla ipsam
+      adipisci officiis nobis laudantium voluptate voluptatibus alias molestiae aspernatur reiciendis enim
+      reprehenderit! Sunt amet magnam nemo a velit laudantium possimus? Laborum, laboriosam dolorum corporis obcaecati
+      architecto quasi.
+    </article>
+    <footer>footer - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, ipsam.</footer>
+  </body>
+</html>

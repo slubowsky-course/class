@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        gap: 1em;
+
+        margin: 2em;
+
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      body * {
+        grid-column: 1 / -1;
+      }
+
+      @media (600px <= width) {
+          nav ul {
+            display: flex;
+            justify-content: space-around;
+          }
+
+          aside {
+            grid-column: 1 / span 2;
+            grid-row: 3;
+          }
+
+          article {
+            grid-column: 3 / -1;
+            grid-row: 3;
+          }
+
+          .ad {
+            grid-column: 1 / span 2;
+            grid-row: 4;
+          }
+
+          footer {
+            grid-column: 3 / -1;
+            grid-row: 4;
+          }
+      }
+
+      @media (800px <= width) {
+        nav ul {
+          flex-direction: column;
+        }
+
+        nav {
+          grid-row: 2;
+          grid-column: 1 / span 2;
+        }
+
+        article {
+          grid-row: 2 / span 2;
+          grid-column: 3 / -3;
+        }
+
+        aside {
+          grid-column: -3 / -1;
+          grid-row: 2;
+        }
+
+        .ad {
+          grid-column: -3 / -1;
+          grid-row: 3;
+        }
+
+        footer {
+          grid-column: 1 / -1;
+          grid-row: 4;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>header - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, nostrum!</header>
+
+    <nav>
+      <ul>
+        <li><a href="#">link 1</a></li>
+        <li><a href="#">link 2</a></li>
+        <li><a href="#">link 3</a></li>
+      </ul>
+    </nav>
+
+    <aside>
+      aside - Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quibusdam, aperiam reprehenderit eum
+      necessitatibus nisi?
+    </aside>
+
+    <article>
+      <h1>main content</h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ullam blanditiis molestiae, repudiandae praesentium eligendi officia earum? Quos autem labore, reiciendis, voluptas doloremque maiores in magni ullam, adipisci eligendi impedit? Delectus odit cupiditate id magnam quos neque aperiam pariatur quod inventore porro ipsa accusamus nisi mollitia velit consectetur, veniam iste temporibus incidunt asperiores officiis qui corrupti doloremque nam! Vitae aspernatur hic rem pariatur voluptate reiciendis eum quae adipisci officiis quis veniam repudiandae atque quisquam assumenda iusto nesciunt sapiente dolor ipsam corrupti, est deserunt velit maiores nihil. Voluptas minus sapiente, fuga eveniet totam dolore laudantium illum, numquam, voluptatem at dicta eum tenetur error rerum unde. Maxime illum et nihil id eius quam cumque, nobis enim pariatur aliquid eaque suscipit corrupti, facere perspiciatis ducimus qui tenetur, incidunt excepturi quasi veritatis tempore dolore iure! Aut reiciendis necessitatibus est minus, ipsa voluptas ea odio voluptatem ad maxime numquam totam, repellendus eveniet, exercitationem mollitia consequatur.
+    </article>
+
+    <div class="ad">ad - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum optio amet quod aliquid eius dignissimos, corrupti voluptates voluptatum labore quidem.</div>
+
+    <footer>footer - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, autem!</footer>
+  </body>
+</html>
