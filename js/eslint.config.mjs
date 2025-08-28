@@ -13,7 +13,8 @@ export default defineConfig([
       "no-var": "error",
       "quotes": ["error", "single"],
       "semi": "error",
-      "eqeqeq": "error"
+      "eqeqeq": "error",
+      "wrap-iife": "error"
     }
   }
 ]);
