@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="msg" />
+    <input id="modal" type="checkbox" />modal
+    <button id="show">show</button>
+    <hr />
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis odio rerum maxime explicabo quos aperiam
+    quae deleniti soluta. Sint perspiciatis distinctio aut itaque at repellat temporibus debitis ea assumenda?
+    <script src="messageBox.js"></script>
+    <script>
+      pcsMessageBox({ msg: 'This is a test!!!' });
+
+      pcsMessageBox({ msg: 'This is a test!!!', buttons: ['yes', 'no', 'maybe'] });
+
+      pcsMessageBox({
+        msg: 'Is this enough homework?',
+        buttons: ['Yes', 'No', 'Maybe'],
+        callback: (whatTheUserPicked) => console.log('You picked ', whatTheUserPicked /*.innerText*/),
+        /*callback: function (button) {
+          alert(button);
+        }*/
+      });
+
+      show.addEventListener('click', () => {
+        pcsMessageBox({ msg: msg.value, modal: modal.checked });
+      });
+    </script>
+  </body>
+</html>
