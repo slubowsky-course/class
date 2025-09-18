@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="clock.css">
+    <style>
+      .clock {
+        color: green;
+        border: 2px solid red;
+        margin: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PCS Clock</h1>
+    <hr>
+    <div id="clockGoesHere"></div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur laudantium debitis, expedita totam
+      repudiandae nisi sequi cumque fuga incidunt ducimus aperiam ratione! Ipsa, assumenda tempora necessitatibus amet
+      voluptates minima!
+    </p>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="clock.js"></script>
+    <script>
+      pcsClock(document.querySelector('#clockGoesHere'));
+      pcsClock();
+    </script>
+  </body>
+</html>

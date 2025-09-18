@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        background-color: pink;
+      }
+
+      #charlie {
+        color: green;
+      }
+
+      #charlie:hover {
+        color: red;
+      }
+
+      /*input:hover {
+        background-color: gold;
+      }*/
+
+      .highlight {
+        background-color: gold;
+      }
+
+      input {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="potus">Donald Trump</h1>
+    <h1 id="charlie">Charlie Kirk</h1>
+
+    <label> first: <input id="first"/> </label>
+    <label> last: <input /> </label>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="pcsTools.js"></script>
+    <script>
+      const potus = /*pcs*/ /*jQuery*/ $('#potus');
+      potus.css('color', 'red');
+      console.log(potus.css('color'));
+      console.log(potus.css('backgroundColor'));
+      potus.click(() => {
+        console.log('potus was clicked');
+        potus.css('bottom', 0);
+      });
+      potus.on('mouseenter', () => potus.css('fontSize', '64px'));
+      potus.on('mouseleave', () => potus.css('fontSize', '2em'));
+
+      potus.css('position', 'absolute');
+      potus.css('bottom', '100px');
+
+      //potus.sparkle(100, 5000);
+
+      const charlie = /*pcs*/ /*jQuery*/ $('#charlie')
+        //.css('color', 'green')
+        //.sparkle('slowly', 10000)
+        .click(() => console.log('charlie was clicked'))
+        .on('mouseenter', () => console.log('mouse entered charlie'))
+        .css('font-family', 'cursive');
+
+      setTimeout(() => {
+        potus.hide();
+      }, 2000);
+
+      setTimeout(() => {
+        potus.show();
+      }, 4000);
+
+      //pcs('h1').css('font-style', 'italic');
+      $('h1').css('font-style', 'italic');
+
+      //const first = $('#first');
+      /*first* /$('#first').on('mouseenter', /*() =>* / function(e) {
+        console.log(this, e.target);
+        /*first* /$(/*this* /e.target).css('background-color', 'gold');
+      });*/
+
+      /*$('input').on('mouseenter', function () {
+        $(this).css('background-color', 'gold');
+      }).on('mouseleave', function () {
+        $(this).css('background-color', 'white');
+      });*/
+
+      $('input').addClass('foo');
+
+      console.dir($('input'));
+
+      $('input').on('mouseenter', function () {
+        $(this).addClass('highlight');
+      }).on('mouseleave', function () {
+        $(this).removeClass('highlight');
+      });
+    </script>
+  </body>
+</html>
