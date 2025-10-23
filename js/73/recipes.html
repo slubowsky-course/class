@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      #ingredients {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .has-recipe {
+        display: none;
+      }
+
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>PCS Recipes</h1>
+    </header>
+    <hr />
+    <select id="recipes">
+      <option hidden>select a recipe</option>
+    </select>
+
+    <div class="no-recipe">
+      <h3>please choose a recipe</h3>
+      <h3 class="error"></h3>
+    </div>
+
+    <div class="has-recipe">
+      <h2 id="name"></h2>
+      <img id="picture" />
+
+      <h5>ingredients</h5>
+      <ul id="ingredients"></ul>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="recipes.js"></script>
+  </body>
+</html>
