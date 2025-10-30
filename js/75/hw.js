@@ -7,7 +7,7 @@
   const { AdvancedMarkerElement/*, PinElement*/ } = await google.maps.importLibrary('marker');
   const bmg = { lat: 40.096044749672394, lng: -74.22197586384449 };
   const searchInput = document.querySelector('#search');
-  const geonamesApiKey = 'slubowsky';
+  const geonamesApiKey = 'USE_YOUR_KEY';
   const placesList = document.querySelector('#places');
 
   const map = new Map(document.getElementById('map'), {
