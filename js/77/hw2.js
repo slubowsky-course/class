@@ -18,14 +18,14 @@
       const p = addPart({
         src: target.attr('src'),
         className: target.attr('class'),
-        top: target.css('left'),
-        left: target.css('top'),
+        top: `${e.pageY - offset.y}px`,
+        left: `${e.pageX - offset.x}px`,
         zIndex: target.css('zIndex')
       });
-      p.css({
+      /*p.css({
         left: `${e.pageX - offset.x}px`,
         top: `${e.pageY - offset.y}px`
-      });
+      });*/
 
       //dragging = p;
     } /*else {
