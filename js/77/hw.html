@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body,
+      #sidebar,
+      #main {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+      }
+
+      #sidebar {
+        background-color: lightcyan;
+        overflow: auto;
+      }
+
+      #main {
+        background-image: url('media/background1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .xpart {
+        position: absolute;
+      }
+
+      .potato {
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sidebar">
+      <img src="media/1.png" class="part" />
+      <img src="media/2.png" class="part" />
+      <img src="media/3.png" class="part" />
+      <img src="media/4.png" class="part" />
+      <img src="media/5.png" class="part" />
+      <img src="media/6.png" class="part" />
+      <img src="media/7.png" class="part" />
+      <img src="media/8.png" class="part" />
+      <img src="media/9.png" class="part" />
+      <img src="media/10.png" class="part" />
+      <img src="media/11.png" class="part" />
+      <img src="media/12.png" class="part" />
+      <img src="media/13.png" class="part" />
+      <img src="media/14.png" class="part" />
+      <img src="media/15.png" class="part" />
+      <img src="media/16.png" class="part" />
+      <img src="media/17.png" class="part" />
+      <img src="media/18.png" class="part" />
+      <img src="media/19.png" class="part" />
+      <img src="media/20.png" class="part" />
+      <img src="media/21.png" class="part" />
+      <img src="media/22.png" class="part" />
+      <img src="media/23.png" class="part potato" />
+    </div>
+    <div id="main">
+      <audio src="media/music1.mp3" xautoplay loop controls></audio>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+    <script src="hw2.js"></script>
+  </body>
+</html>
