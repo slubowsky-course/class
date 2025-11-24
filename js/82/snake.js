@@ -57,8 +57,8 @@
         }
       }
 
-      if (!gameOver && tempX < 0 || tempX > theCanvas.width - CELL_SIZE ||
-        tempY < 0 || tempY > theCanvas.height - CELL_SIZE) {
+      if (!gameOver && (tempX < 0 || tempX > theCanvas.width - CELL_SIZE ||
+        tempY < 0 || tempY > theCanvas.height - CELL_SIZE)) {
         gameOver = true;
       }
 
