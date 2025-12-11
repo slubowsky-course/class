@@ -1,0 +1,23 @@
+.calculator {
+  display: grid;
+
+  grid-template-columns: repeat(4, 4em);
+  grid-auto-rows: 4em;
+  gap: .5em;
+}
+
+.calculator input {
+  grid-column: 1/5;
+  text-align: right;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.calculator button {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.calculator :last-child {
+  grid-column: 1/5;
+}
