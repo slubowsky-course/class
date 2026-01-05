@@ -1,0 +1,14 @@
+.formGroup label {
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+  margin: .5em;
+}
+
+button.primary {
+  background-color: greenyellow;
+}
+
+button.secondary {
+  background-color: lightblue;
+}

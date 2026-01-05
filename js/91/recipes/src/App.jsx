@@ -6,7 +6,9 @@ import NoRecipe from './NoRecipe';
 import RecipeList from './RecipeList';
 import AddRecipeComponent from './AddRecipeComponent';
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Outlet } from 'react-router';
+import { BrowserRouter, Routes, Route, Outlet, Navigate } from 'react-router';
+import EditRecipeComponent from './EditRecipeComponent.jsx';
+import RecipeRoute from './RecipeRoute.jsx';
 
 export default function App() {
   const [recipes, setRecipes] = useState([]);
@@ -14,6 +16,12 @@ export default function App() {
   const handleAddRecipe = recipe => {
     recipe.id = Math.max(...recipes.map(r => r.id)) + 1;
     const newRecipes = [...recipes, recipe];
+    setRecipes(newRecipes);
+  }
+
+  const handleEditRecipe = recipe => {
+    const newRecipes = [...recipes];
+    newRecipes[newRecipes.findIndex(r => r.id === +recipe.id)] = recipe;
     setRecipes(newRecipes);
   }
 
@@ -47,8 +55,17 @@ export default function App() {
           </>
         }>
           <Route index element={<RecipeList recipes={recipes} />} />
-          <Route path="/recipe/:id" element={recipe} />
+          {/*<Route path="/recipe/:id" element={recipe} />
+          <Route element={<RecipeFormLayout />} >
+            <Route path="/addRecipe" element={<AddRecipeComponent handleAddRecipe={handleAddRecipe} />} />
+            <Route path="/editRecipe/:id" element={<EditRecipeComponent handleEditRecipe={handleEditRecipe} recipes={recipes} />} />
+          </Route>*/}
           <Route path="/addRecipe" element={<AddRecipeComponent handleAddRecipe={handleAddRecipe} />} />
+          <Route path="/:id" element={<RecipeRoute recipes={recipes} />}>
+            <Route index element={recipe} />
+            <Route path="edit" element={<EditRecipeComponent handleEditRecipe={handleEditRecipe} recipes={recipes} />} />
+          </Route>
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </BrowserRouter>
