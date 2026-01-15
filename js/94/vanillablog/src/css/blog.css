@@ -1,0 +1,15 @@
+.post {
+  margin-bottom: 0.5em;
+}
+
+.post .title {
+  font-style: italic;
+}
+
+.comments-area {
+  border: 1px solid black;
+}
+
+.comments {
+  display: none;
+}
