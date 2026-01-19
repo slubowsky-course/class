@@ -1,0 +1,7 @@
+.comment {
+  margin-bottom: 0.5em;
+}
+
+.comment .email {
+  font-weight: bold;
+}
