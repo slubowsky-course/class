@@ -5,7 +5,7 @@ const path = require('path');
 
 fs.readdir(process.argv[2], (err, files) => {
   if (err) {
-    console.error(err);
+    return console.error(err);
   }
 
   //files.filter(f => f.endsWith(process.argv[3])).forEach(f => console.log(f));

@@ -3,7 +3,7 @@ import http from 'http';
 http.createServer((req, res) => {
   console.log(req.url);
 
-  // req.hostname?
+  // req.headers.host
   const url = new URL(req.url, 'http://localhost');
   console.log(url.pathname);
   console.log(url.searchParams);
