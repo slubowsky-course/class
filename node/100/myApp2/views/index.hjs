@@ -1,0 +1,33 @@
+
+    <p>Welcome to {{ title }}</p>
+
+    {{foo}}
+
+    <ul>
+    {{#people}}
+      <li>{{name}}</li>
+    {{/people}}
+    </ul>
+
+    My favorite person is: {{favoritePerson.name}}
+
+    <br />
+
+    {{#favoritePerson}}
+    My favorite person is: {{name}}
+    {{/favoritePerson}}
+
+    {{#hasNoFavorite}}
+    I have no favorite person
+    {{/hasNoFavorite}}
+
+    <br/>
+
+    some of my favorite fruits are:
+    <ul>
+      {{#fruits}}
+        <li>{{.}}</li>
+      {{/fruits}}
+    </ul>
+  </body>
+</html>
