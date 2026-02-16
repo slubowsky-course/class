@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <button id="addContact">add contact</button>
+    <table id="contactsTable">
+      <thead>
+        <tr>
+          <th>first</th>
+          <th>last</th>
+          <th>email</th>
+          <th>phone</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="5">No contacts loaded</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="first">first:</label>
+        <input id="first" />
+      </div>
+      <div class="form-group">
+        <label for="last">last:</label>
+        <input id="last" required />
+      </div>
+      <div class="form-group">
+        <label for="email">email:</label>
+        <input id="email" type="email" />
+      </div>
+      <div class="form-group">
+        <label for="phone">phone:</label>
+        <input id="phone" type="tel" />
+      </div>
+      <button>save</button>
+      <button type="reset">reset</button>
+      <button id="cancel" type="button">cancel</button>
+    </form>
+    <script src="/javascripts/jquery-3.7.1.min.js"></script>
+    <!--script src="/javascripts/messageBox.js"></script-->
+    <script src="/javascripts/contacts.js" type="module"></script>
+  </body>
+</html>
