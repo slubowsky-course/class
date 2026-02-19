@@ -1,0 +1,36 @@
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 0.5em;
+}
+
+.form-group {
+  margin-bottom: 0.5em;
+}
+
+.form-group label {
+  width: 3em;
+  display: inline-block;
+}
+
+#contactForm {
+  display: none;
+  background-color: lightcyan;
+  border: 1px solid black;
+  padding: 1em;
+  height: 8.5em;
+  width: 15em;
+
+  /*margin: auto;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -4.25em;
+  margin-left: -7.5em;
+}
