@@ -1,0 +1,18 @@
+<h1>{{ title }}</h1>
+<p>Welcome to {{ title }}</p>
+
+{{#errorMsg}}
+<h5 class="error">{{errorMsg}}</h5>
+{{/errorMsg}}
+
+{{#notLoggedIn}}
+<form method="POST">
+  <label>name: <input name="userName" required></label>
+  <br/>
+  <label>password: <input type="password" name="password" required></label>
+  <br/>
+  <button formaction="login">login</button>
+
+  <button formaction="signUp">sign up</button>
+</form>
+{{/notLoggedIn}}
