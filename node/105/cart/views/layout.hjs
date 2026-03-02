@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>{{ title }}</title>
+
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="mb-5">
+        <h1>Welcome to {{ appTitle }}</h1>
+        <a href="/">home</a> | <a href="/cart">view cart</a>
+      </header>
+
+
+      {{> content}}
+    </div>
+  </body>
+
+</html>
