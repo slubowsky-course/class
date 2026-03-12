@@ -12,7 +12,7 @@ import { MongoClient } from 'mongodb';
 
 async function runGetStarted() {
   //const uri = 'mongodb://localhost:27017';
-  const uri = 'mongodb+srv://testUser:FxGKmKXbl7dXZTf1@cluster0.ebvluuf.mongodb.net/?appName=Cluster0';
+  const uri = 'mongodb+srv://<user>:<password>@cluster0.ebvluuf.mongodb.net/?appName=Cluster0';
   const client = new MongoClient(uri);
   try {
     /*const database = client.db('one');
