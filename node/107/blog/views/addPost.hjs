@@ -1,0 +1,12 @@
+<link href="/stylesheets/addPost.css" rel="stylesheet"/>
+
+<form id="addPost" method="POST" action="/">
+  <label>title:
+    <input name="title" required>
+  </label>
+  <label>content:
+    <textarea name="body"></textarea>
+  </label>
+
+  <button>add post</button>
+</form>

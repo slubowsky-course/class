@@ -1,0 +1,984 @@
+Microsoft Windows [Version 10.0.26200.8037]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\slubo>mongosh
+Current Mongosh Log ID: 69b1fcab10e70400187c2906
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.7.0
+Using MongoDB:          8.2.5
+Using Mongosh:          2.7.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2026-03-11T18:43:51.833-04:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+1 test>show dbs
+accounts   6.12 MiB
+admin     40.00 KiB
+config    36.00 KiB
+foo       64.00 KiB
+local     64.00 KiB
+one       72.00 KiB
+2 test>use one
+switched to db one
+3 one>show collections
+presidents
+4 one>db.presidents.find()
+[
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4214'),
+    name: 'Donald Trump',
+    year: 2025
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4215'),
+    name: 'Joe Biden',
+    year: 2021
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4216'),
+    name: 'Donald Trump',
+    year: 2017
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4217'),
+    name: 'Barack Obama',
+    year: 2009
+  },
+  { _id: ObjectId('67be604ae7e210589bfa4218'), name: 'bar', year: 2009 },
+  { _id: ObjectId('69ae2da00d5fc9f60e7c2908'), name: 'foo' },
+  { _id: ObjectId('69ae2da00d5fc9f60e7c2909'), name: 'foo2' }
+]
+5 one>db.presidents.deleteOne({name: 'foo'})
+{ acknowledged: true, deletedCount: 1 }
+6 one>db.presidents.find()
+[
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4214'),
+    name: 'Donald Trump',
+    year: 2025
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4215'),
+    name: 'Joe Biden',
+    year: 2021
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4216'),
+    name: 'Donald Trump',
+    year: 2017
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4217'),
+    name: 'Barack Obama',
+    year: 2009
+  },
+  { _id: ObjectId('67be604ae7e210589bfa4218'), name: 'bar', year: 2009 },
+  { _id: ObjectId('69ae2da00d5fc9f60e7c2909'), name: 'foo2' }
+]
+7 one>db.presidents.updateOne({name: 'foo2'}, {$set: {year: 2028}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+8 one>db.presidents.find()
+[
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4214'),
+    name: 'Donald Trump',
+    year: 2025
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4215'),
+    name: 'Joe Biden',
+    year: 2021
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4216'),
+    name: 'Donald Trump',
+    year: 2017
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4217'),
+    name: 'Barack Obama',
+    year: 2009
+  },
+  { _id: ObjectId('67be604ae7e210589bfa4218'), name: 'bar', year: 2009 },
+  { _id: ObjectId('69ae2da00d5fc9f60e7c2909'), name: 'foo2', year: 2028 }
+]
+9 one>db.presidents.updateOne({name: 'foo2'}, {$set: {year: 2028}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+10 one>db.presidents.updateOne({name: 'foo2'}, {$unset: {year: 2028}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+11 one>db.presidents.find()
+[
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4214'),
+    name: 'Donald Trump',
+    year: 2025
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4215'),
+    name: 'Joe Biden',
+    year: 2021
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4216'),
+    name: 'Donald Trump',
+    year: 2017
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4217'),
+    name: 'Barack Obama',
+    year: 2009
+  },
+  { _id: ObjectId('67be604ae7e210589bfa4218'), name: 'bar', year: 2009 },
+  { _id: ObjectId('69ae2da00d5fc9f60e7c2909'), name: 'foo2' }
+]
+12 one>db.presidents.updateOne({name: 'foo2'}, {$set: {year: 2028}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+13 one>db.presidents.find()
+[
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4214'),
+    name: 'Donald Trump',
+    year: 2025
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4215'),
+    name: 'Joe Biden',
+    year: 2021
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4216'),
+    name: 'Donald Trump',
+    year: 2017
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4217'),
+    name: 'Barack Obama',
+    year: 2009
+  },
+  { _id: ObjectId('67be604ae7e210589bfa4218'), name: 'bar', year: 2009 },
+  { _id: ObjectId('69ae2da00d5fc9f60e7c2909'), name: 'foo2', year: 2028 }
+]
+14 one>db.presidents.updateOne({name: 'foo2'}, {$unset: {year: 2028}, {$set: {bar: 'bar'}})
+Uncaught:
+SyntaxError: Unexpected token (1:63)
+
+> 1 | db.presidents.updateOne({name: 'foo2'}, {$unset: {year: 2028}, {$set: {bar: 'bar'}})
+    |                                                                ^
+  2 |
+
+15 one>db.presidents.updateOne({name: 'foo2'}, {$unset: {year: 2028}, $set: {bar: 'bar'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+16 one>db.presidents.find()
+[
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4214'),
+    name: 'Donald Trump',
+    year: 2025
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4215'),
+    name: 'Joe Biden',
+    year: 2021
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4216'),
+    name: 'Donald Trump',
+    year: 2017
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4217'),
+    name: 'Barack Obama',
+    year: 2009
+  },
+  { _id: ObjectId('67be604ae7e210589bfa4218'), name: 'bar', year: 2009 },
+  { _id: ObjectId('69ae2da00d5fc9f60e7c2909'), name: 'foo2', bar: 'bar' }
+]
+17 one>db.presidents.updateOne({name: 'foo2'}, {$set: {bar: 'bar2'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+18 one>db.presidents.find()
+[
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4214'),
+    name: 'Donald Trump',
+    year: 2025
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4215'),
+    name: 'Joe Biden',
+    year: 2021
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4216'),
+    name: 'Donald Trump',
+    year: 2017
+  },
+  {
+    _id: ObjectId('67be5f8ae7e210589bfa4217'),
+    name: 'Barack Obama',
+    year: 2009
+  },
+  { _id: ObjectId('67be604ae7e210589bfa4218'), name: 'bar', year: 2009 },
+  {
+    _id: ObjectId('69ae2da00d5fc9f60e7c2909'),
+    name: 'foo2',
+    bar: 'bar2'
+  }
+]
+19 one>use pople
+switched to db pople
+20 pople>use people
+switched to db people
+21 people>db.people.insertMany([{name: 'Donald', age: 80}, {name: 'Ayatollah', age: 56}, {name: 'Marco', age: 60}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('69b1fef410e70400187c2907'),
+    '1': ObjectId('69b1fef410e70400187c2908'),
+    '2': ObjectId('69b1fef410e70400187c2909')
+  }
+}
+22 people>db.people.find()
+[
+  { _id: ObjectId('69b1fef410e70400187c2907'), name: 'Donald', age: 80 },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56
+  },
+  { _id: ObjectId('69b1fef410e70400187c2909'), name: 'Marco', age: 60 }
+]
+23 people>db.people.find().prettyPrint()
+TypeError: db.people.find().prettyPrint is not a function
+24 people>db.people.updateMany({}, {$inc: {age: 1}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+25 people>db.people.find()
+[
+  { _id: ObjectId('69b1fef410e70400187c2907'), name: 'Donald', age: 81 },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 57
+  },
+  { _id: ObjectId('69b1fef410e70400187c2909'), name: 'Marco', age: 61 }
+]
+26 people>db.people.updateMany({}, {$inc: {age: -1}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+27 people>db.people.find()
+[
+  { _id: ObjectId('69b1fef410e70400187c2907'), name: 'Donald', age: 80 },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56
+  },
+  { _id: ObjectId('69b1fef410e70400187c2909'), name: 'Marco', age: 60 }
+]
+28 people>db.people.updateMany({}, {$set: {position: 'software engineeer', salary: 100000}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+29 people>db.people.find()
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'software engineeer',
+    salary: 100000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000
+  }
+]
+30 people>db.people.updateOne({}, {$set: {position: 'software engineeer', salary: 100000}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+31 people>db.people.updateMany({name: 'Donald'}, {$set: {position: 'president', salary: 100000}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+32 people>db.people.find()
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 100000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000
+  }
+]
+33 people>db.people.updateMany({name: 'Donald'}, {$set: {position: 'president', salary: 110000}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+34 people>db.people.find()
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000
+  }
+]
+35 people>db.people.find({salary: {$lt: 110000}})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000
+  }
+]
+36 people>db.people.find({salary: {$lte: 110000}})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000
+  }
+]
+37 people>db.people.find({salary: {$gte: 110000}})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000
+  }
+]
+38 people>db.people.find({salary: {$gt: 110000}})
+
+39 people>db.people.find({salary: {$gt: 100000}})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000
+  }
+]
+40 people>db.people.find({salary: {$eg: 100000}})
+MongoServerError[BadValue]: unknown operator: $eg
+41 people>db.people.find({salary: {$eq: 100000}})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000
+  }
+]
+42 people>db.people.find({salary: {$ne: 100000}})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000
+  }
+]
+43 people>db.people.find({$and: [{salary: {$gte: 110000}}, {position: {$eq: 'president'}}]})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000
+  }
+]
+44 people>db.people.find({$and: [{salary: {$gte: 110000}}, {position: {$neq: 'president'}}]})
+MongoServerError[BadValue]: unknown operator: $neq
+45 people>db.people.find({$and: [{salary: {$gte: 110000}}, {position: {$ne: 'president'}}]})
+
+46 people>db.people.find({$and: [{salary: {$lt: 110000}}, {position: {$ne: 'president'}}]})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000
+  }
+]
+47 people>db.people.find({$and: [{salary: {$lte: 110000}}, {position: {$ne: 'president'}}]})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000
+  }
+]
+48 people>db.people.find({$and: [{salary: {$lte: 110000}}, {position: {$eq: 'president'}}]})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000
+  }
+]
+49 people>db.people.find({position: 'president'})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000
+  }
+]
+50 people>db.people.find({$and: [{salary: {$lte: 110000}}, {position: 'president'}]}
+|
+|
+|
+53 people>db.people.find({$and: [{salary: {$lte: 110000}}, {position: 'president'}]})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000
+  }
+]
+54 people>db.people.find({ $and: [{ salary: { $lte: 110000 } }, { position: 'foo' }] })
+
+55 people>db.people.find({$and: [{salary: {$lte: 110000}}, {position: {$ne: 'president'}}]})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000
+  }
+]
+56 people>db.people.find({$or: [{salary: {$gte: 110000}}, {position: {$ne: 'president'}}]})
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000
+  }
+]
+57 people>db.people.updateMany({}, {$set: {references: ['Joe', 'Bob', 'Tucker']})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:70)
+
+> 1 | db.people.updateMany({}, {$set: {references: ['Joe', 'Bob', 'Tucker']})
+    |                                                                       ^
+  2 |
+
+58 people>db.people.updateMany({}, {$set: {references: ['Joe', 'Bob', 'Tucker']}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+59 people>db.people.find()
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  }
+]
+60 people>db.people.updateOne({name: 'Donald'}, {$push: {references: 'JD'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+61 people>db.people.find()
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000,
+    references: [ 'Joe', 'Bob', 'Tucker', 'JD' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  }
+]
+62 people>db.people.updateOne({name: 'Donald'}, {$pop: 1})
+MongoServerError: Modifiers operate on fields but we found type int instead. For example: {$mod: {<field>: ...}} not {$pop: 1}
+63 people>db.people.updateOne({name: 'Donald'}, {$pop: {references: 1}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+64 people>db.people.find()
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  }
+]
+65 people>db.people.updateOne({name: 'Donald'}, {$pop: {references: -1}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+66 people>db.people.find()
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000,
+    references: [ 'Bob', 'Tucker' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  }
+]
+67 people>db.people.updateMany({name: 'Donald'}, {$set: {references: ['Joe', 'Bobby', 'TuckerC']}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+68 people>db.people.find()
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000,
+    references: [ 'Joe', 'Bobby', 'TuckerC' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  }
+]
+69 people>db.people.updateOne({name: 'Donald'}, {$pull: {references: 'Bobby'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+70 people>db.people.find()
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000,
+    references: [ 'Joe', 'TuckerC' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  }
+]
+71 people>db.people.updateMany({name: 'Donald'}, {$set: {references: ['Joe', 'Bobby', 'TuckerC']}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+72 people>db.people.find()
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000,
+    references: [ 'Joe', 'Bobby', 'TuckerC' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  }
+]
+73 people>db.people.updateOne({name: 'Donald'}, {$pull: {references: {$in: ['Bobby', 'Joe']}}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+74 people>db.people.find()
+[
+  {
+    _id: ObjectId('69b1fef410e70400187c2907'),
+    name: 'Donald',
+    age: 80,
+    position: 'president',
+    salary: 110000,
+    references: [ 'TuckerC' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2908'),
+    name: 'Ayatollah',
+    age: 56,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  },
+  {
+    _id: ObjectId('69b1fef410e70400187c2909'),
+    name: 'Marco',
+    age: 60,
+    position: 'software engineeer',
+    salary: 100000,
+    references: [ 'Joe', 'Bob', 'Tucker' ]
+  }
+]
+75 people>use bar
+switched to db bar
+76 bar>db.foo.insertMany({},{},{})
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+77 bar>db.foo.insertMany([{},{},{}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('69b2051510e70400187c290a'),
+    '1': ObjectId('69b2051510e70400187c290b'),
+    '2': ObjectId('69b2051510e70400187c290c')
+  }
+}
+78 bar>show collections
+foo
+79 bar>show dbs
+accounts    6.12 MiB
+admin      40.00 KiB
+bar         8.00 KiB
+config    100.00 KiB
+foo        64.00 KiB
+local      64.00 KiB
+one        68.00 KiB
+people     56.00 KiB
+80 bar>db.bar.insertOne({})
+{
+  acknowledged: true,
+  insertedId: ObjectId('69b2052c10e70400187c290d')
+}
+81 bar>show collections
+bar
+foo
+82 bar>db.foo.drop()
+true
+83 bar>show collections
+bar
+84 bar>db.dropDatabase()
+{ ok: 1, dropped: 'bar' }
+85 bar>show dbs
+accounts    6.12 MiB
+admin      40.00 KiB
+config    100.00 KiB
+foo        64.00 KiB
+local      64.00 KiB
+one        68.00 KiB
+people     56.00 KiB
+86 bar>
