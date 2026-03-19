@@ -28,7 +28,7 @@ router.route('/')
       res.status(201)
         //.location(`/posts/${req.body.id})
         .send(req.body);
-    } catch (e) {
+    } catch (e) { 
       next(e);
     }
   });
