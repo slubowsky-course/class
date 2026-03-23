@@ -1,0 +1,1197 @@
+Microsoft Windows [Version 10.0.26200.8037]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\slubo>mongosh
+Current Mongosh Log ID: 69c08535cba42f7b067c2906
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.7.0
+Using MongoDB:          8.2.5
+Using Mongosh:          2.7.0
+mongosh 2.8.1 is available for download: https://www.mongodb.com/try/download/shell
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2026-03-13T10:05:07.813-04:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+1 test>show dbs
+accounts    6.12 MiB
+admin      40.00 KiB
+blog      180.00 KiB
+config    100.00 KiB
+foo        64.00 KiB
+local      76.00 KiB
+one        68.00 KiB
+people     56.00 KiB
+recipes    40.00 KiB
+2 test>use blog
+switched to db blog
+3 blog>blog.posts.find
+ReferenceError: blog is not defined
+4 blog>blog.posts.find()
+ReferenceError: blog is not defined
+5 blog>db.posts.find()
+[
+  {
+    _id: ObjectId('69b2145310e70400187c290e'),
+    title: 'Ayatollah Khamanei is DEAD!',
+    author: 'Donald',
+    date: ISODate('2026-03-12T01:18:11.054Z'),
+    body: 'Nobody can do what this president can',
+    comments: [
+      {
+        body: 'test',
+        date: ISODate('2026-03-19T02:34:41.917Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'dfr',
+        date: ISODate('2026-03-19T02:34:59.796Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'frdsfrertwet',
+        date: ISODate('2026-03-19T02:35:33.752Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'a',
+        date: ISODate('2026-03-22T23:39:05.099Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'b',
+        date: ISODate('2026-03-22T23:41:35.763Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'c',
+        date: ISODate('2026-03-22T23:44:42.874Z'),
+        author: 'Marco'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b2148e10e70400187c290f'),
+    title: 'Huckabee is under a spell',
+    author: 'Tucker',
+    date: ISODate('2026-03-12T01:19:10.427Z'),
+    body: 'Its chabad witchcraft'
+  },
+  {
+    _id: ObjectId('69b21b5bc4d3a75ba9467a92'),
+    title: 'test',
+    body: '123',
+    date: ISODate('2026-03-12T01:48:11.869Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b74e7ba30142910bfa9b06'),
+    title: '',
+    body: '',
+    date: ISODate('2026-03-16T00:27:39.782Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b74f2da30142910bfa9b07'),
+    title: 'a',
+    body: 'b',
+    date: ISODate('2026-03-16T00:30:37.823Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b750aaa30142910bfa9b08'),
+    title: 'd',
+    body: 'e',
+    date: ISODate('2026-03-16T00:36:58.744Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b7553eb6a9b67ddc9734d0'),
+    title: 'a',
+    body: 'b',
+    date: ISODate('2026-03-16T00:56:30.919Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b75554b6a9b67ddc9734d1'),
+    title: 'a',
+    body: 'b',
+    date: ISODate('2026-03-16T00:56:52.234Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b755eeb6a9b67ddc9734d2'),
+    title: 'c',
+    body: 'd',
+    date: ISODate('2026-03-16T00:59:26.925Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b7562fb6a9b67ddc9734d3'),
+    title: 'e',
+    body: 'f',
+    date: ISODate('2026-03-16T01:00:31.369Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b75682b6a9b67ddc9734d4'),
+    title: 'g',
+    body: 'h',
+    date: ISODate('2026-03-16T01:01:54.338Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b75712b6a9b67ddc9734d5'),
+    title: 'h',
+    body: 'i',
+    date: ISODate('2026-03-16T01:04:18.511Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b7579eb6a9b67ddc9734d6'),
+    title: 'j',
+    body: 'k',
+    date: ISODate('2026-03-16T01:06:38.282Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b757a5b6a9b67ddc9734d7'),
+    title: 'l',
+    body: 'm',
+    date: ISODate('2026-03-16T01:06:45.885Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b75845b6a9b67ddc9734d8'),
+    title: 'l',
+    body: 'm',
+    date: ISODate('2026-03-16T01:09:25.838Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b75c49fd9b5a28d5ed8c84'),
+    title: 'n',
+    body: 'o',
+    date: ISODate('2026-03-16T01:26:33.027Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69b75f06638077ed72535747'),
+    title: 'n',
+    body: 'o',
+    date: ISODate('2026-03-16T01:38:14.851Z'),
+    author: 'Donald'
+  },
+  {
+    _id: ObjectId('69bb3bea29b81c98e43279b2'),
+    title: 'a',
+    body: 'b',
+    date: ISODate('2026-03-18T23:57:30.061Z'),
+    author: null
+  },
+  {
+    _id: ObjectId('69bb3d3343f1053aa7ce92b6'),
+    title: 'hgfhg',
+    body: 'ghgh',
+    date: ISODate('2026-03-19T00:02:59.062Z'),
+    author: null
+  },
+  {
+    _id: ObjectId('69bb3dfba92bf02c27ee7ded'),
+    title: '123',
+    body: '456',
+    date: ISODate('2026-03-19T00:06:19.030Z'),
+    author: null,
+    comments: [
+      {
+        body: 'I am a comment',
+        date: ISODate('2026-03-19T01:48:38.042Z'),
+        author: 'Khomeni'
+      },
+      {
+        body: 'I am another comment',
+        date: ISODate('2026-03-19T01:49:00.000Z'),
+        author: 'Khomeni'
+      },
+      {
+        body: 'I am yet another comment',
+        date: ISODate('2026-03-19T01:59:23.537Z'),
+        author: 'Khomeni'
+      },
+      {
+        body: 'I am yet another comment',
+        date: ISODate('2026-03-19T01:59:50.267Z'),
+        author: 'Khomeni'
+      },
+      {
+        body: 'I am yet another comment',
+        date: ISODate('2026-03-19T02:00:57.254Z'),
+        author: 'Khomeni'
+      }
+    ]
+  }
+]
+Type "it" for more
+6 blog>
+
+7 blog>
+
+8 blog>
+
+9 blog>db.posts.findOne()
+{
+  _id: ObjectId('69b2145310e70400187c290e'),
+  title: 'Ayatollah Khamanei is DEAD!',
+  author: 'Donald',
+  date: ISODate('2026-03-12T01:18:11.054Z'),
+  body: 'Nobody can do what this president can',
+  comments: [
+    {
+      body: 'test',
+      date: ISODate('2026-03-19T02:34:41.917Z'),
+      author: 'Marco'
+    },
+    {
+      body: 'dfr',
+      date: ISODate('2026-03-19T02:34:59.796Z'),
+      author: 'Marco'
+    },
+    {
+      body: 'frdsfrertwet',
+      date: ISODate('2026-03-19T02:35:33.752Z'),
+      author: 'Marco'
+    },
+    {
+      body: 'a',
+      date: ISODate('2026-03-22T23:39:05.099Z'),
+      author: 'Marco'
+    },
+    {
+      body: 'b',
+      date: ISODate('2026-03-22T23:41:35.763Z'),
+      author: 'Marco'
+    },
+    {
+      body: 'c',
+      date: ISODate('2026-03-22T23:44:42.874Z'),
+      author: 'Marco'
+    }
+  ]
+}
+10 blog>
+
+11 blog>
+
+12 blog>use recipes
+switched to db recipes
+13 recipes>db.recipes.find()
+[
+  {
+    _id: ObjectId('67cdbd0fb6a1f919c8fa4214'),
+    recipe: 'Macaroni',
+    author: 'John Doe',
+    likes: 250,
+    dislikes: 2,
+    type: 'Italian'
+  },
+  {
+    _id: ObjectId('67cdbd0fb6a1f919c8fa4215'),
+    recipe: 'Spaghetti',
+    author: 'Jane Doe',
+    likes: 123,
+    dislikes: 34,
+    type: 'Italian'
+  },
+  {
+    _id: ObjectId('67cdbd0fb6a1f919c8fa4216'),
+    recipe: 'Hot Dog',
+    author: 'John Doe',
+    likes: 321,
+    dislikes: 1,
+    type: 'American'
+  },
+  {
+    _id: ObjectId('67cdbd0fb6a1f919c8fa4217'),
+    recipe: 'Steak',
+    author: 'Jane Doe',
+    likes: 111,
+    dislikes: 27,
+    type: 'American'
+  },
+  {
+    _id: ObjectId('67cdbd0fb6a1f919c8fa4218'),
+    recipe: 'Chulent',
+    author: 'John Doe',
+    likes: 30000,
+    dislikes: 2,
+    type: 'Jewish'
+  },
+  {
+    _id: ObjectId('67cdbd0fb6a1f919c8fa4219'),
+    recipe: 'Burger',
+    author: 'John Doe',
+    likes: 998,
+    dislikes: 6,
+    type: 'American'
+  }
+]
+14 recipes>db.recipes.find({author: 'John Doe'}).count()
+4
+15 recipes>db.recipes.find({author: 'Jane Doe'}).count()
+2
+20 recipes>db.recipes.aggregate({
+| $group: {
+|     _id: '$author',
+|     num_recipes: {$sum: 1}
+| }})
+[
+  { _id: 'Jane Doe', num_recipes: 2 },
+  { _id: 'John Doe', num_recipes: 4 }
+]
+22 recipes>db.recipes.aggregate({ $group: { _id: '$author', num_likes: { $sum: '$likes' }, num_dislikes: {$sum: '$dislikes'} } })
+[
+  { _id: 'John Doe', num_likes: 31569, num_dislikes: 11 },
+  { _id: 'Jane Doe', num_likes: 234, num_dislikes: 61 }
+]
+23 recipes>db.recipes.aggregate({match: {type: 'American'}},{ $group: { _id: '$author', num_likes: { $sum: '$likes' }, num_dislikes: {$sum: '$dislikes'} } })
+MongoServerError[Location40324]: Unrecognized pipeline stage name: 'match'
+24 recipes>db.recipes.aggregate({$match: {type: 'American'}},{ $group: { _id: '$author', num_likes: { $sum: '$likes' },num_dislikes: {$sum: '$dislikes'} } })
+[
+  { _id: 'Jane Doe', num_likes: 111, num_dislikes: 27 },
+  { _id: 'John Doe', num_likes: 1319, num_dislikes: 7 }
+]
+25 recipes>db.recipes.aggregate({$match: {type: 'American'}},{ $group: { _id: '$author', num_likes: { $sum: '$likes' },num_dislikes: {$sum: '$dislikes'} }, {$sort: {num_likes: -1}})
+Uncaught:
+SyntaxError: Unexpected token (1:146)
+
+> 1 | db.recipes.aggregate({$match: {type: 'American'}},{ $group: { _id: '$author', num_likes: { $sum: '$likes' }, num_dislikes: {$sum: '$dislikes'} }, {$sort: {num_likes: -1}})
+    |                                ^
+  2 |
+
+26 recipes>db.recipes.aggregate({$match: {type: 'American'}},{ $group: { _id: '$author', num_likes: { $sum: '$likes' },num_dislikes: {$sum: '$dislikes'} } })
+[
+  { _id: 'Jane Doe', num_likes: 111, num_dislikes: 27 },
+  { _id: 'John Doe', num_likes: 1319, num_dislikes: 7 }
+]
+27 recipes>
+| db.recipes.aggregate(
+|   { $match: { type: 'American' } },
+|   { $group: { _id: '$author', num_likes: { $sum: '$likes' }, num_dislikes: { $sum: '$dislikes' } }},
+|   {$sort: {num_likes: -1}})
+|
+[
+  { _id: 'John Doe', num_likes: 1319, num_dislikes: 7 },
+  { _id: 'Jane Doe', num_likes: 111, num_dislikes: 27 }
+]
+28 recipes>use blog
+switched to db blog
+32 blog>db.posts.aggregate({
+| $lookup: {
+|   from: 'users',
+|   localField: 'author',
+|   foreignField: 'userName',
+|   as: 'the_author'
+| })
+Uncaught:
+SyntaxError: Unexpected token, expected "," (7:1)
+
+  5 |   foreignField: 'userName',
+  6 |   as: 'the_author'
+> 7 | })
+    |  ^
+  8 |
+
+36 blog>db.posts.aggregate({ $lookup: { from: 'users', localField: 'author', foreignField: 'userName', as: 'the_author'}})
+[
+  {
+    _id: ObjectId('69b2145310e70400187c290e'),
+    title: 'Ayatollah Khamanei is DEAD!',
+    author: 'Donald',
+    date: ISODate('2026-03-12T01:18:11.054Z'),
+    body: 'Nobody can do what this president can',
+    comments: [
+      {
+        body: 'test',
+        date: ISODate('2026-03-19T02:34:41.917Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'dfr',
+        date: ISODate('2026-03-19T02:34:59.796Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'frdsfrertwet',
+        date: ISODate('2026-03-19T02:35:33.752Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'a',
+        date: ISODate('2026-03-22T23:39:05.099Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'b',
+        date: ISODate('2026-03-22T23:41:35.763Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'c',
+        date: ISODate('2026-03-22T23:44:42.874Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'new one',
+        date: ISODate('2026-03-23T00:53:52.514Z'),
+        author: 'Marco',
+        _id: ObjectId('69c08f203f6e7c1acb6c5254')
+      },
+      {
+        body: 'works!',
+        author: 'Marco',
+        _id: ObjectId('69c0918c1c5703f5939d43fd'),
+        date: ISODate('2026-03-23T01:04:12.756Z')
+      }
+    ],
+    __v: 1,
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b2148e10e70400187c290f'),
+    title: 'Huckabee is under a spell',
+    author: 'Tucker',
+    date: ISODate('2026-03-12T01:19:10.427Z'),
+    body: 'Its chabad witchcraft',
+    the_author: []
+  },
+  {
+    _id: ObjectId('69b21b5bc4d3a75ba9467a92'),
+    title: 'test',
+    body: '123',
+    date: ISODate('2026-03-12T01:48:11.869Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b74e7ba30142910bfa9b06'),
+    title: '',
+    body: '',
+    date: ISODate('2026-03-16T00:27:39.782Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b74f2da30142910bfa9b07'),
+    title: 'a',
+    body: 'b',
+    date: ISODate('2026-03-16T00:30:37.823Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b750aaa30142910bfa9b08'),
+    title: 'd',
+    body: 'e',
+    date: ISODate('2026-03-16T00:36:58.744Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b7553eb6a9b67ddc9734d0'),
+    title: 'a',
+    body: 'b',
+    date: ISODate('2026-03-16T00:56:30.919Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b75554b6a9b67ddc9734d1'),
+    title: 'a',
+    body: 'b',
+    date: ISODate('2026-03-16T00:56:52.234Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b755eeb6a9b67ddc9734d2'),
+    title: 'c',
+    body: 'd',
+    date: ISODate('2026-03-16T00:59:26.925Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b7562fb6a9b67ddc9734d3'),
+    title: 'e',
+    body: 'f',
+    date: ISODate('2026-03-16T01:00:31.369Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b75682b6a9b67ddc9734d4'),
+    title: 'g',
+    body: 'h',
+    date: ISODate('2026-03-16T01:01:54.338Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b75712b6a9b67ddc9734d5'),
+    title: 'h',
+    body: 'i',
+    date: ISODate('2026-03-16T01:04:18.511Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b7579eb6a9b67ddc9734d6'),
+    title: 'j',
+    body: 'k',
+    date: ISODate('2026-03-16T01:06:38.282Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b757a5b6a9b67ddc9734d7'),
+    title: 'l',
+    body: 'm',
+    date: ISODate('2026-03-16T01:06:45.885Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b75845b6a9b67ddc9734d8'),
+    title: 'l',
+    body: 'm',
+    date: ISODate('2026-03-16T01:09:25.838Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b75c49fd9b5a28d5ed8c84'),
+    title: 'n',
+    body: 'o',
+    date: ISODate('2026-03-16T01:26:33.027Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b75f06638077ed72535747'),
+    title: 'n',
+    body: 'o',
+    date: ISODate('2026-03-16T01:38:14.851Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69bb3bea29b81c98e43279b2'),
+    title: 'a',
+    body: 'b',
+    date: ISODate('2026-03-18T23:57:30.061Z'),
+    author: null,
+    the_author: []
+  },
+  {
+    _id: ObjectId('69bb3d3343f1053aa7ce92b6'),
+    title: 'hgfhg',
+    body: 'ghgh',
+    date: ISODate('2026-03-19T00:02:59.062Z'),
+    author: null,
+    the_author: []
+  },
+  {
+    _id: ObjectId('69bb3dfba92bf02c27ee7ded'),
+    title: '123',
+    body: '456',
+    date: ISODate('2026-03-19T00:06:19.030Z'),
+    author: null,
+    comments: [
+      {
+        body: 'I am a comment',
+        date: ISODate('2026-03-19T01:48:38.042Z'),
+        author: 'Khomeni'
+      },
+      {
+        body: 'I am another comment',
+        date: ISODate('2026-03-19T01:49:00.000Z'),
+        author: 'Khomeni'
+      },
+      {
+        body: 'I am yet another comment',
+        date: ISODate('2026-03-19T01:59:23.537Z'),
+        author: 'Khomeni'
+      },
+      {
+        body: 'I am yet another comment',
+        date: ISODate('2026-03-19T01:59:50.267Z'),
+        author: 'Khomeni'
+      },
+      {
+        body: 'I am yet another comment',
+        date: ISODate('2026-03-19T02:00:57.254Z'),
+        author: 'Khomeni'
+      }
+    ],
+    the_author: []
+  }
+]
+Type "it" for more
+37 blog>it
+[
+  {
+    _id: ObjectId('69bb3f8297f106a684c09d9f'),
+    title: 'ddfht',
+    body: 'ghgfh',
+    date: ISODate('2026-03-19T00:07:56.526Z'),
+    author: null,
+    comments: [
+      {
+        body: '123',
+        date: ISODate('2026-03-22T23:54:48.938Z'),
+        author: 'Marco'
+      }
+    ],
+    the_author: []
+  },
+  {
+    _id: ObjectId('69bb401a97f106a684c09da0'),
+    title: 'hgfhg',
+    body: 'ghgf',
+    date: ISODate('2026-03-19T00:13:36.412Z'),
+    author: null,
+    comments: [
+      {
+        body: '456',
+        date: ISODate('2026-03-22T23:55:43.678Z'),
+        author: 'Marco'
+      }
+    ],
+    the_author: []
+  },
+  {
+    _id: ObjectId('69bb40be97f106a684c09da1'),
+    title: 'fgdg',
+    body: 'dfhfd',
+    date: ISODate('2026-03-19T00:16:04.501Z'),
+    author: null,
+    the_author: []
+  },
+  {
+    _id: ObjectId('69bb429619032ab9d494c4c4'),
+    title: 'ryr',
+    body: 'tyrty',
+    date: ISODate('2026-03-19T00:25:58.793Z'),
+    author: null,
+    the_author: []
+  },
+  {
+    _id: ObjectId('69bb441619032ab9d494c4c5'),
+    title: '543545',
+    body: '45436565',
+    date: ISODate('2026-03-19T00:32:22.834Z'),
+    author: 'Marco',
+    the_author: [
+      {
+        _id: ObjectId('69b761e9e94c2b7aa1abbd96'),
+        userName: 'Marco',
+        hash: '$2b$10$YpxrkoCkReGCE.1MMy9bxOpgQVKMOLJX1YKwvGeSFVB0mL1YvJwEu'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69bb44af19032ab9d494c4c6'),
+    title: '999',
+    body: '999',
+    date: ISODate('2026-03-19T00:34:55.070Z'),
+    author: 'Marco',
+    the_author: [
+      {
+        _id: ObjectId('69b761e9e94c2b7aa1abbd96'),
+        userName: 'Marco',
+        hash: '$2b$10$YpxrkoCkReGCE.1MMy9bxOpgQVKMOLJX1YKwvGeSFVB0mL1YvJwEu'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69bb44ca19032ab9d494c4c7'),
+    title: '888',
+    body: '888',
+    date: ISODate('2026-03-19T00:35:22.039Z'),
+    author: null,
+    the_author: []
+  },
+  {
+    _id: ObjectId('69bb462e5b865256764a2689'),
+    title: 'will it',
+    body: 'fail?',
+    date: ISODate('2026-03-19T00:41:18.974Z'),
+    author: 'Marco',
+    the_author: [
+      {
+        _id: ObjectId('69b761e9e94c2b7aa1abbd96'),
+        userName: 'Marco',
+        hash: '$2b$10$YpxrkoCkReGCE.1MMy9bxOpgQVKMOLJX1YKwvGeSFVB0mL1YvJwEu'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69bb50e3bcdcd90a92b43ec5'),
+    title: 'gtrh',
+    body: 'tytr',
+    date: ISODate('2026-03-19T01:26:59.666Z'),
+    author: 'Marco',
+    the_author: [
+      {
+        _id: ObjectId('69b761e9e94c2b7aa1abbd96'),
+        userName: 'Marco',
+        hash: '$2b$10$YpxrkoCkReGCE.1MMy9bxOpgQVKMOLJX1YKwvGeSFVB0mL1YvJwEu'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69bb50fdbcdcd90a92b43ec6'),
+    title: 'ytuty',
+    body: 'yuytuy',
+    date: ISODate('2026-03-19T01:27:25.450Z'),
+    author: 'Marco',
+    the_author: [
+      {
+        _id: ObjectId('69b761e9e94c2b7aa1abbd96'),
+        userName: 'Marco',
+        hash: '$2b$10$YpxrkoCkReGCE.1MMy9bxOpgQVKMOLJX1YKwvGeSFVB0mL1YvJwEu'
+      }
+    ]
+  }
+]
+38 blog>db.posts.aggregate({ $lookup: { from: 'users', localField: 'author', foreignField: 'userName', as: 'the_author'}})
+[
+  {
+    _id: ObjectId('69b2145310e70400187c290e'),
+    title: 'Ayatollah Khamanei is DEAD!',
+    author: 'Donald',
+    date: ISODate('2026-03-12T01:18:11.054Z'),
+    body: 'Nobody can do what this president can',
+    comments: [
+      {
+        body: 'test',
+        date: ISODate('2026-03-19T02:34:41.917Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'dfr',
+        date: ISODate('2026-03-19T02:34:59.796Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'frdsfrertwet',
+        date: ISODate('2026-03-19T02:35:33.752Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'a',
+        date: ISODate('2026-03-22T23:39:05.099Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'b',
+        date: ISODate('2026-03-22T23:41:35.763Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'c',
+        date: ISODate('2026-03-22T23:44:42.874Z'),
+        author: 'Marco'
+      },
+      {
+        body: 'new one',
+        date: ISODate('2026-03-23T00:53:52.514Z'),
+        author: 'Marco',
+        _id: ObjectId('69c08f203f6e7c1acb6c5254')
+      },
+      {
+        body: 'works!',
+        author: 'Marco',
+        _id: ObjectId('69c0918c1c5703f5939d43fd'),
+        date: ISODate('2026-03-23T01:04:12.756Z')
+      }
+    ],
+    __v: 1,
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b2148e10e70400187c290f'),
+    title: 'Huckabee is under a spell',
+    author: 'Tucker',
+    date: ISODate('2026-03-12T01:19:10.427Z'),
+    body: 'Its chabad witchcraft',
+    the_author: []
+  },
+  {
+    _id: ObjectId('69b21b5bc4d3a75ba9467a92'),
+    title: 'test',
+    body: '123',
+    date: ISODate('2026-03-12T01:48:11.869Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b74e7ba30142910bfa9b06'),
+    title: '',
+    body: '',
+    date: ISODate('2026-03-16T00:27:39.782Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b74f2da30142910bfa9b07'),
+    title: 'a',
+    body: 'b',
+    date: ISODate('2026-03-16T00:30:37.823Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b750aaa30142910bfa9b08'),
+    title: 'd',
+    body: 'e',
+    date: ISODate('2026-03-16T00:36:58.744Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b7553eb6a9b67ddc9734d0'),
+    title: 'a',
+    body: 'b',
+    date: ISODate('2026-03-16T00:56:30.919Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b75554b6a9b67ddc9734d1'),
+    title: 'a',
+    body: 'b',
+    date: ISODate('2026-03-16T00:56:52.234Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b755eeb6a9b67ddc9734d2'),
+    title: 'c',
+    body: 'd',
+    date: ISODate('2026-03-16T00:59:26.925Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b7562fb6a9b67ddc9734d3'),
+    title: 'e',
+    body: 'f',
+    date: ISODate('2026-03-16T01:00:31.369Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b75682b6a9b67ddc9734d4'),
+    title: 'g',
+    body: 'h',
+    date: ISODate('2026-03-16T01:01:54.338Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b75712b6a9b67ddc9734d5'),
+    title: 'h',
+    body: 'i',
+    date: ISODate('2026-03-16T01:04:18.511Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b7579eb6a9b67ddc9734d6'),
+    title: 'j',
+    body: 'k',
+    date: ISODate('2026-03-16T01:06:38.282Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b757a5b6a9b67ddc9734d7'),
+    title: 'l',
+    body: 'm',
+    date: ISODate('2026-03-16T01:06:45.885Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b75845b6a9b67ddc9734d8'),
+    title: 'l',
+    body: 'm',
+    date: ISODate('2026-03-16T01:09:25.838Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b75c49fd9b5a28d5ed8c84'),
+    title: 'n',
+    body: 'o',
+    date: ISODate('2026-03-16T01:26:33.027Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69b75f06638077ed72535747'),
+    title: 'n',
+    body: 'o',
+    date: ISODate('2026-03-16T01:38:14.851Z'),
+    author: 'Donald',
+    the_author: [
+      {
+        _id: ObjectId('69bb46aa5b865256764a268a'),
+        userName: 'Donald',
+        hash: '$2b$10$P2/SVMMz15KTKHptKfZzieAaeViICgmirhqDbZ6UBofE1IafqIgIC'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('69bb3bea29b81c98e43279b2'),
+    title: 'a',
+    body: 'b',
+    date: ISODate('2026-03-18T23:57:30.061Z'),
+    author: null,
+    the_author: []
+  },
+  {
+    _id: ObjectId('69bb3d3343f1053aa7ce92b6'),
+    title: 'hgfhg',
+    body: 'ghgh',
+    date: ISODate('2026-03-19T00:02:59.062Z'),
+    author: null,
+    the_author: []
+  },
+  {
+    _id: ObjectId('69bb3dfba92bf02c27ee7ded'),
+    title: '123',
+    body: '456',
+    date: ISODate('2026-03-19T00:06:19.030Z'),
+    author: null,
+    comments: [
+      {
+        body: 'I am a comment',
+        date: ISODate('2026-03-19T01:48:38.042Z'),
+        author: 'Khomeni'
+      },
+      {
+        body: 'I am another comment',
+        date: ISODate('2026-03-19T01:49:00.000Z'),
+        author: 'Khomeni'
+      },
+      {
+        body: 'I am yet another comment',
+        date: ISODate('2026-03-19T01:59:23.537Z'),
+        author: 'Khomeni'
+      },
+      {
+        body: 'I am yet another comment',
+        date: ISODate('2026-03-19T01:59:50.267Z'),
+        author: 'Khomeni'
+      },
+      {
+        body: 'I am yet another comment',
+        date: ISODate('2026-03-19T02:00:57.254Z'),
+        author: 'Khomeni'
+      }
+    ],
+    the_author: []
+  }
+]
+Type "it" for more
+39 blog>
