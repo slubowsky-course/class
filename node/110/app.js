@@ -9,6 +9,5 @@ await potus.save();
 
 
 const friends = new ContactList({name: 'friends', contacts: [potus]});
-friends.populate('contacts');
 friends.print();
 friends.save();
