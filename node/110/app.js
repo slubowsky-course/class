@@ -10,4 +10,13 @@ await potus.save();
 
 const friends = new ContactList({name: 'friends', contacts: [potus]});
 friends.print();
-friends.save();
+await friends.save();
+
+const coworkers = new ContactList({ name: 'coworkers', contacts: [potus] });
+coworkers.print();
+await coworkers.save();
+
+const reconstitudedLists = await ContactList.find().populate('contacts');
+reconstitudedLists[0].contacts[0].name = 'foo';
+reconstitudedLists[0].print();
+reconstitudedLists[1].print();
