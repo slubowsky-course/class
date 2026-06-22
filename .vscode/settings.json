@@ -1,4 +1,5 @@
 {
   "editor.fontSize": 18,
-  "editor.inlineSuggest.enabled": false
+  "editor.inlineSuggest.enabled": false,
+  "window.zoomLevel": 1
 }
