@@ -1,0 +1,88 @@
+/*@import url('normalize.css');*/
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+html {
+  background-color: white;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  /*width: 80%;*/
+
+  background-color: black;
+  color: white;
+  padding: 1em;
+}
+
+header {
+  text-align: center;
+  color: red;
+
+  border: 8px solid green;
+  /*border-color: yellow;
+  border-bottom-color: red;*/
+  border-radius: 20px;
+
+  margin-bottom: 1em;
+
+  background: #3ffbd2;
+  background: radial-gradient(circle, rgba(63, 251, 210, 1) 0%, rgba(114, 213, 103, 1) 21%, rgba(169, 105, 167, 1) 52%, rgba(214, 127, 86, 1) 78%, rgba(252, 70, 107, 1) 100%);
+
+  box-shadow: 4px 4px 4px 4px rgb(216, 238, 144);
+}
+
+header img {
+  /*border: 10px solid red;*/
+  display: inline-block;
+  width: 261px;
+  height: 193px;
+
+  border-radius: 100px;
+}
+
+header h1 {
+  font-family: creepster, fantasy;
+}
+
+div {
+  border-bottom: 1px solid black;
+}
+
+nav {
+  margin-bottom: 1em;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightgray;
+}
+
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:focus {
+  border: 1px solid blue;
+}
+
+a:active {
+  color: yellow;
+}
+
+a.active {
+  color: pink;
+}
+
+nav ol, nav ol li {
+  display: inline;
+  padding: 0;
+}
