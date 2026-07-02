@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: .5em;
+      }
+      /*label {
+        display: none;
+      }*/
+
+      input:not([type="submit"]) {
+        width: 98%;
+        display: inline-block;
+        margin-bottom: .5em;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post">
+      <label>first:
+        <input type="text" name="first" minlength="3" maxlength="7" required/>
+      </label>
+      <label for="last">last:</label>
+      <input name="last" id="last"/>
+
+      <textarea name="comments"></textarea>
+      password: <input type="password" name="password">
+
+      <input type="submit">
+    </form>
+  </body>
+</html>

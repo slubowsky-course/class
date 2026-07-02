@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* universal selector */
+      /* * {
+        line-height: 12px;
+        border: 10px solid yellow;
+      }*/
+
+      /* type selector */
+      section {
+        color: red;
+      }
+
+      /* id selector */
+      #second {
+        font-weight: bold;
+      }
+
+      /* class selector */
+      .special {
+        font-style: italic;
+      }
+
+      /* multiple selectors */
+      .special,
+      p {
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      /* descendent selector */
+      section p {
+        rotate: 2deg;
+      }
+
+      section * {
+        background-color: green;
+      }
+
+      /* immediate children only */
+      p > span {
+        border: 10px solid purple;
+      }
+
+      /* sibling selector */
+      /* immediate next */
+      .special + section {
+        font-size: 1.5em;
+      }
+
+      /* all following */
+      .special ~ section {
+        background-image: url(images/burger.jpg);
+      }
+
+      /* previous */
+      section:has(+ p) {
+        margin-top: 2em;
+      }
+
+      /* not */
+      section:not(.special) {
+        letter-spacing: 3px;
+      }
+
+      /* pseudo classes, active, focus, visited etc... */
+      section:hover {
+        scale: 1.5;
+      }
+
+      /* pseudo elements */
+      section::first-letter {
+        text-transform: lowercase;
+      }
+
+      .special::first-line {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam maiores voluptatem nostrum voluptas ratione
+      impedit optio rerum, accusamus iusto, voluptate numquam nulla, ex molestiae quae sequi dolor sapiente? Accusamus,
+      doloremque!
+      <p>
+        Im in a section
+        <span
+          >and Im in the p
+          <span>so am I!</span>
+        </span>
+      </p>
+      <h5>So am I</h5>
+    </section>
+    <section id="second">
+      Perferendis sed odio tempore non dolore. Esse excepturi autem at quos. Expedita maxime labore nihil unde illum in
+      a voluptatem sit id repellat magni, aperiam error perspiciatis corrupti vel? Commodi?
+    </section>
+    <section class="special">
+      Soluta magni maxime sapiente consequatur exercitationem aliquid, cupiditate aliquam totam optio debitis nostrum,
+      repudiandae fuga facilis. Ipsam earum laborum fuga amet, iure veniam illum. Ad dolores tempore ipsum velit iste?
+    </section>
+    <section>
+      Beatae voluptates illum, harum nihil praesentium aspernatur? Pariatur maxime expedita neque sequi aliquam rerum
+      provident eaque vero, voluptates iste possimus unde enim quis quod minus incidunt odit consectetur! Velit,
+      reprehenderit.
+    </section>
+    <section>
+      Delectus odio deleniti eligendi, optio possimus officia. Ipsum sint aliquam perspiciatis magni. Hic ipsam animi
+      doloribus obcaecati sunt deleniti quidem repellendus iure quasi, voluptate debitis. Neque error consequatur
+      tempora eius?
+    </section>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odit odio a optio excepturi explicabo alias. In quos
+      voluptate sequi exercitationem obcaecati consectetur itaque, quisquam nemo eius, qui officiis neque.
+    </p>
+  </body>
+</html>
