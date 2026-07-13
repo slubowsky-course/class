@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        --default-background-color: red;
+
+        --default-space: 1.75em;
+
+        --foo: cursive;
+      }
+
+      body {
+        display: grid;
+        gap: 1em;
+      }
+
+      header {
+        background-color: var(--default-background-color);
+
+        margin: var(--default-space);
+
+        font-family: var(--foo);
+      }
+
+      article {
+        background-color: var(--default-background-color);
+        padding: var(--default-space);
+        font-family: var(--foo);
+
+        h1 {
+          color: blue;
+        }
+      }
+
+      /* article h1 {
+        color: blue;
+      } */
+
+      aside {
+        background-color: var(--default-background-color);
+        padding: var(--default-space);
+      }
+
+      footer {
+        background-color: var(--default-background-color);
+        padding: var(--default-space);
+      }
+
+      header {
+        /*transition-duration: 2s;
+        transition-property: font-size;*/
+
+        transition: font-size 2s ease-in-out 2s;
+      }
+
+      header:hover {
+        font-size: 2em;
+        color: yellow;
+
+        /*transition-delay: 1s;*/
+      }
+
+      header {
+        animation-duration: 3s;
+        animation-name: slide-in;
+      }
+
+      @keyframes slide-in {
+        from {
+          translate: 150vw 0;
+          scale: 200% 1;
+        }
+
+        to {
+          translate: 0 0;
+          scale: 100% 1;
+        }
+      }
+
+      .box {
+        background-color: yellow;
+        border: 1 px solid black;
+        width: 150px;
+        height: 150px;
+
+        display: flex;
+
+        p {
+          margin: auto;
+        }
+      }
+
+      .box {
+        transition: 2s;
+
+        /* BTW - can nest the hover using - &:hover{...}
+      }
+
+      .box:hover {
+        font-size: 2m;
+        height: 300px;
+        width: 300px;
+        background-color: blue;
+        color: yellow;
+        rotate: 180deg;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>PCS</h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, fuga odio dignissimos sunt impedit
+      ducimus, quos vitae quia voluptatum laborum, alias aliquid totam ex officiis. Suscipit, mollitia fugit! Nulla,
+      natus?
+    </header>
+    <article>
+      <h1>title</h1>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, esse nihil itaque aspernatur laboriosam quasi
+      ipsam modi repellendus quam, velit sint distinctio impedit eos labore debitis temporibus ratione molestiae
+      excepturi?
+    </article>
+    <aside>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium corporis quia, excepturi incidunt delectus
+      molestiae, laboriosam mollitia accusamus exercitationem consequuntur commodi in blanditiis cum minima, quas
+      dignissimos error ducimus consectetur.
+    </aside>
+    <footer>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, dolor sapiente reiciendis recusandae harum
+      impedit amet eius sed adipisci rem deserunt expedita placeat aut reprehenderit magni odio. Reiciendis, atque!
+      Cumque.
+    </footer>
+
+    <div class="box">
+      <p>Hi!</p>
+    </div>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequatur quisquam maiores eligendi praesentium
+      sapiente, iure voluptas quod optio molestiae officia et perspiciatis dolorem harum beatae quidem aperiam magni
+      corporis ratione animi blanditiis numquam eos earum. Rem, cum nostrum officiis facere porro ipsum, est
+      consequuntur, itaque error tempora neque mollitia dignissimos nemo suscipit dolorem possimus! Distinctio officiis
+      aperiam, maiores quasi, vel deserunt ea qui, quod a quaerat alias eos facilis ipsum molestiae necessitatibus quos
+      ex? Ad architecto, dolor nesciunt beatae accusamus dolore nostrum nam ullam earum aliquam, dolorem officiis
+      temporibus excepturi quam libero tempora. Maxime quia neque nobis perspiciatis accusamus adipisci magnam dolorum,
+      non sint? Voluptatum aperiam veritatis iste et ratione, exercitationem, eligendi labore ab distinctio quam
+      laudantium molestiae, totam numquam voluptatem quidem quia at sit sunt reiciendis omnis cumque repellat iure ipsum
+      impedit! Officia magni, sed impedit, asperiores maiores facere autem culpa obcaecati praesentium neque beatae, a
+      dicta doloremque quidem. Veritatis voluptatum, blanditiis suscipit id pariatur aliquid! Tempora doloremque
+      perspiciatis nesciunt, provident ex corporis cumque officia tempore illo? Dignissimos nam consequatur ratione
+      sequi provident esse id aut alias incidunt suscipit odit voluptates fugiat ut dolore saepe, ab nulla dolor
+      laboriosam aspernatur est eligendi omnis veritatis! Porro odit illo repellat veniam ipsa! Architecto tempora
+      debitis optio nam quam iusto accusantium fugit explicabo sit delectus voluptatibus temporibus, dolorem
+      exercitationem. Iste nobis fuga laudantium assumenda voluptas quam recusandae veniam porro explicabo temporibus?
+      Atque porro labore quaerat dolorum et quasi tenetur similique aliquid pariatur, expedita sed ducimus ullam
+      reprehenderit! Nemo aperiam, temporibus necessitatibus vitae suscipit illo omnis, dolore iusto officiis, magnam
+      consequuntur! Ipsam molestias maiores harum ea tempora impedit explicabo, error odio incidunt dolores, non rerum
+      mollitia facere omnis? Cum voluptate ut neque vero asperiores soluta pariatur exercitationem recusandae vel ea
+      incidunt quidem molestias ad nemo error itaque corrupti qui nulla earum laborum nihil, corporis ipsa harum! A
+      molestiae saepe quisquam quos accusamus natus praesentium dolorem. Ea, error assumenda maiores dignissimos fuga,
+      neque tempore odio commodi quam a sit! Quibusdam, molestiae, veritatis sint qui dolore praesentium, exercitationem
+      ut deserunt alias recusandae beatae repellat tempora. Excepturi expedita voluptate beatae, obcaecati
+      exercitationem, in ullam quia voluptatem nisi numquam repudiandae laborum! Reiciendis cupiditate ipsum sequi
+      tempore exercitationem. Et odit maxime nam officiis harum cupiditate distinctio. Aut dolore qui ab nisi. Veritatis
+      nobis eaque repellendus accusamus et perspiciatis fugiat sequi nihil amet quam fugit, totam reprehenderit
+      excepturi, distinctio voluptatum blanditiis adipisci esse tenetur ad aspernatur! Rem dolores, inventore iste in
+      repellendus quasi. Sunt, maxime nulla. In doloremque obcaecati incidunt eum non vitae harum quis nobis! Eius
+      praesentium consequatur ipsa exercitationem accusantium aspernatur explicabo laudantium veniam sed voluptatum
+      deleniti neque quod iste minus libero perspiciatis culpa, atque similique. Nobis incidunt cumque voluptatum amet,
+      velit minus distinctio, quibusdam cum maxime quasi dolorem non aut corrupti dolor ex facere consequuntur
+      voluptatibus eius, ad corporis aperiam. Natus obcaecati totam labore minima assumenda sint repellendus sed
+      laudantium excepturi. Nemo, similique quis. Quod officia optio beatae? Sed quasi voluptatem eum reiciendis
+      voluptatum. Sed rem nobis laborum fuga sint deserunt nam recusandae reiciendis omnis?
+    </p>
+  </body>
+</html>

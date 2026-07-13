@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 2em;
+        display: grid;
+        gap: 1.5em;
+
+        grid-template-areas:
+          'header'
+          'nav'
+          'aside'
+          'main'
+          'ad'
+          'footer';
+      }
+
+      header {
+        grid-area: header;
+      }
+
+      nav {
+        grid-area: nav;
+      }
+
+      aside {
+        grid-area: aside;
+      }
+
+      article {
+        grid-area: main;
+      }
+
+      .ad {
+        grid-area: ad;
+      }
+
+      footer {
+        grid-area: footer;
+      }
+
+      nav ul {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media screen and (600px <= width) {
+        body {
+          grid-template-areas:
+            'header header'
+            'nav    nav '
+            'aside  main'
+            'ad     footer';
+
+          grid-template-columns: 2fr 10fr;
+        }
+
+        nav ul {
+          flex-direction: row;
+          justify-content: space-around;
+        }
+      }
+
+      @media screen and (800px <= width) {
+        nav ul {
+          flex-direction: column;
+        }
+
+        body {
+          grid-template-areas:
+            'header header header'
+            'nav    main   aside '
+            'nav    main   ad'
+            'footer footer footer';
+
+          grid-template-columns: 2fr 8fr 2fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quaerat Lorem ipsum dolor sit amet.</header>
+    <nav>
+      <ul>
+        <li><a href="#">link 1</a></li>
+        <li><a href="#">link 2</a></li>
+        <li><a href="#">link 3</a></li>
+      </ul>
+    </nav>
+    <aside>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque velit, rem adipisci ratione laboriosam inventore
+      accusamus esse totam natus modi obcaecati sequi. Qui vero a, illo pariatur quaerat esse. Esse!
+    </aside>
+    <article>
+      <h1>main content</h1>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe inventore dignissimos molestiae cupiditate laborum
+      recusandae, ab enim. Corrupti animi nam temporibus aliquid totam perferendis? A, blanditiis! Maxime, fugiat
+      consequatur officia quam explicabo perferendis laboriosam molestiae quaerat id corporis consectetur omnis tempora
+      ipsum velit a eveniet asperiores tempore. Officia beatae amet, qui perspiciatis incidunt esse cumque doloribus,
+      quidem dicta, saepe est quaerat facilis debitis eveniet neque. Voluptatum expedita minus ipsa? Exercitationem
+      nobis facilis ipsam natus alias ullam laboriosam eveniet corporis assumenda autem error, expedita cum. Distinctio
+      quos placeat delectus soluta molestias tempore voluptatibus exercitationem impedit, dolor aliquid ipsam sequi
+      atque veritatis quasi dolorem optio est repudiandae, animi ipsum, maiores accusamus esse. Iusto, maxime
+      aspernatur? Quasi in obcaecati expedita rem suscipit! Assumenda quos autem tempora voluptas veritatis quia
+      quibusdam nemo saepe sapiente qui? Ad quis officia saepe, voluptas reiciendis in minima ratione! Dicta ipsum esse
+      molestiae corporis non dolorem maiores deleniti temporibus.
+    </article>
+    <aside class="ad">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit soluta alias quos magni quam optio nam
+      voluptatem aliquam eius? At tenetur nisi est impedit vel modi omnis consectetur. Repellendus, quidem.
+    </aside>
+    <footer>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, vel!</footer>
+  </body>
+</html>
