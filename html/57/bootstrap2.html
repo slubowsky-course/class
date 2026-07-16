@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="mt-5 pt-1">
+    <nav class="navbar navbar-expand-md bg-dark fixed-top" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">PCS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#foo"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="foo">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!--div style="z-index: 1000; color: red; font-size: 2em; position: absolute">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores consectetur dolorum quae, necessitatibus fugit
+      obcaecati sapiente quaerat id odio molestiae officia ipsum ut magnam animi quia quos nobis facilis saepe!
+    </div-->
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            Accordion Item #2
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse
+            plugin adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button class="btn btn-success">Im a button</button>
+        <button class="btn btn-primary">Im a button</button>
+        <button class="btn btn-danger">Im a button</button>
+        <button class="btn btn-link">Im a button</button>
+        <a href="#" class="btn btn-secondary">Im an anchor</a>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="false"
+            aria-controls="collapseThree"
+          >
+            Accordion Item #3
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae tenetur, expedita dolore assumenda ab, quis
+    reiciendis perspiciatis veniam facere reprehenderit, dicta cumque! Odit, fugiat quasi placeat repellendus nobis,
+    nihil tempora, ea neque consequuntur necessitatibus voluptatibus quo iste doloribus animi eos mollitia esse in
+    provident. Ab harum eum cumque quasi accusantium fuga beatae corporis labore iure doloremque vero debitis, quas
+    dolore molestiae praesentium rem temporibus in consequuntur reiciendis, ratione error explicabo nihil laborum magni.
+    Nisi molestiae magnam atque suscipit et rerum neque rem tempore omnis quod. Ratione praesentium voluptatum aliquid
+    dolores similique ut quis inventore est amet. Earum blanditiis doloremque sequi. Quidem, a iure doloremque
+    voluptates quas vel sint eius non aut pariatur in ullam libero aliquid earum provident, minus nihil temporibus autem
+    reiciendis possimus explicabo quam mollitia! Non placeat iusto, voluptas dolorem itaque, fugit quos sequi tempore
+    ipsa voluptatibus cum similique odit officiis, esse consequatur ut voluptatem? Illo dignissimos id at illum ullam
+    iure voluptas labore laudantium totam ex molestiae ea, veritatis quod saepe minus temporibus beatae tenetur dolor
+    eum exercitationem unde eos? Voluptates maiores commodi, nemo esse culpa hic animi, eum asperiores soluta fuga
+    cupiditate minus porro dolorem possimus. Soluta saepe praesentium obcaecati animi, incidunt enim vitae consequuntur
+    eius esse doloremque ratione, rerum, dignissimos a totam reprehenderit expedita debitis porro qui maiores alias
+    mollitia. Culpa, ut porro inventore velit obcaecati aperiam, quia ea impedit voluptate accusantium praesentium
+    molestias? Impedit repudiandae dolorem quo molestiae voluptatum maxime sint, et in tenetur expedita necessitatibus
+    repellendus quam nisi velit incidunt error, amet officia debitis odit, facere temporibus consequuntur eaque. Vero,
+    sapiente totam ad unde, molestias ut nulla reprehenderit ipsum at debitis, sint dignissimos excepturi. Magnam
+    aliquid odio, cum placeat blanditiis, ad porro voluptate vero necessitatibus architecto voluptatum delectus incidunt
+    et libero suscipit esse vel corrupti similique magni, aliquam officia molestias quasi commodi sapiente. Laborum
+    repellendus beatae similique ab autem est eligendi iusto vitae necessitatibus culpa cum non aut cumque soluta illum
+    sapiente dolores, possimus omnis nisi excepturi nulla aperiam fugiat nihil? Voluptate culpa consectetur placeat
+    velit impedit nesciunt unde, deleniti ducimus nam necessitatibus sequi totam, cum tenetur recusandae saepe quo et!
+    Odit ex quaerat expedita voluptas doloremque sapiente et dolor sint! Amet quibusdam architecto voluptatem, laborum
+    corporis eius, perferendis quod doloribus alias error delectus a suscipit quae, quam cum blanditiis rerum distinctio
+    soluta? Deserunt nisi quasi eligendi, nobis eaque aliquam accusamus? Tenetur, aperiam adipisci dolorum possimus
+    sequi temporibus perspiciatis neque soluta? Sunt tempora, illum vitae enim veniam aut? Asperiores earum nam nemo
+    amet esse delectus obcaecati, error, repellat rem tempora aspernatur laborum iure sapiente veritatis officia
+    molestias. Excepturi cum nostrum nobis repellendus cupiditate sunt, accusamus, aliquam at quo labore facilis
+    eligendi provident ad fuga recusandae, et totam culpa perferendis autem est. Aperiam obcaecati maxime aliquid nulla,
+    exercitationem quod saepe excepturi itaque cum quae molestiae error voluptates dignissimos iure cumque voluptatum
+    culpa facere sint possimus facilis sit, tempora explicabo! Pariatur atque ipsum excepturi blanditiis? Tempore ut
+    mollitia, impedit nostrum debitis asperiores perspiciatis excepturi ipsum corporis facere distinctio et ullam magnam
+    iusto sapiente. Aliquam, magni? Neque dolorum sapiente accusamus quod voluptatibus similique alias minima velit amet
+    corporis? Libero, voluptatem est magnam iusto maxime aperiam sint a nam similique rerum optio earum, adipisci
+    consequuntur voluptatibus! Vitae doloribus debitis nostrum sint repellendus commodi similique, delectus tenetur
+    expedita rem! Consectetur cupiditate quidem, possimus odit officia ut aspernatur veniam! Error itaque architecto
+    exercitationem dolor dolorum saepe necessitatibus repellendus voluptates ducimus dolores quam nobis labore rem,
+    maxime quasi aut beatae ratione fugit quis. Porro aspernatur totam non velit nesciunt maxime fugiat. Ab ea animi
+    inventore quia distinctio nulla nemo nihil libero provident accusamus delectus eum perspiciatis officia dicta vel
+    blanditiis sint, eaque veritatis esse adipisci reprehenderit. Aut vitae atque consequuntur iusto exercitationem sint
+    repellendus eveniet debitis eos libero a quisquam cupiditate et architecto perferendis quo unde tenetur ipsum
+    dolorum veritatis, temporibus modi minus neque! Quis qui inventore, ipsam molestias error deserunt corporis nulla
+    debitis culpa reprehenderit perspiciatis magni aperiam quia, amet ab, voluptatum aliquid in adipisci est. Esse,
+    mollitia incidunt! Nobis perferendis ex autem tempora harum natus amet culpa vero similique aliquam, dicta non
+    perspiciatis voluptas neque quas laudantium ab aspernatur ullam, nihil repellendus. Itaque esse nesciunt consequatur
+    magni quasi nam iusto nemo veritatis libero nobis nostrum quas consequuntur, aliquid sunt debitis, facere assumenda
+    asperiores voluptas neque. Sit sapiente excepturi nisi, incidunt ratione fuga repellendus necessitatibus, quam
+    quisquam voluptate harum voluptatibus omnis, odit eum commodi! Alias, cupiditate voluptatibus possimus qui eligendi
+    magni beatae aspernatur nemo, sit doloremque veritatis saepe quis assumenda hic ab! Et excepturi consequatur,
+    explicabo velit deleniti maxime quis dolore quidem corrupti tenetur provident architecto nihil, ipsam debitis.
+    Tempore dicta molestias corporis. Nesciunt laborum, rem aliquam eos et exercitationem magnam. Culpa rem id animi
+    vitae labore, repellat nemo. Ad libero beatae ullam pariatur qui sit tempora asperiores, dicta accusantium deserunt
+    aspernatur corrupti quam, excepturi nulla iusto alias! Alias excepturi minus fugiat sapiente aliquid velit corrupti
+    consequuntur magnam, illum eius laudantium temporibus, reprehenderit veritatis neque minima cumque nam nihil laborum
+    deserunt blanditiis, voluptatem sit! Explicabo tempore odio quasi debitis eum mollitia non, sunt obcaecati. Repellat
+    voluptates maiores voluptatem minus voluptatibus blanditiis sint debitis. Officiis corrupti quam adipisci.
+    Laboriosam, repudiandae eligendi iusto natus repellat a doloribus dolorem. Iste laudantium at, vel unde quasi hic
+    eos cum cumque, accusamus debitis voluptatum magni? Harum ipsam molestias enim optio molestiae hic eligendi
+    laudantium ut dolores praesentium laborum iste impedit atque maiores nostrum dicta, odit deserunt dolor quos culpa
+    magnam nihil. Magnam atque accusantium maiores, commodi, aliquid placeat eligendi similique laboriosam doloribus
+    eaque cum, rerum harum explicabo sunt corporis! Sint animi vitae nesciunt iure dolor? Ea est sunt officia? Dicta
+    iste, pariatur labore necessitatibus dolor tempora dolorum ullam debitis sunt quis laboriosam odio distinctio ut,
+    atque, sit illo harum quo vero cupiditate cumque. Omnis voluptatum deleniti laboriosam ipsam, sit iste est
+    exercitationem inventore recusandae nostrum quaerat. Ullam est accusantium sit nostrum! Nisi incidunt, amet ut natus
+    dolorum exercitationem error magni perferendis nostrum! Ullam, rerum omnis. Optio fuga consectetur culpa labore illo
+    doloremque excepturi, obcaecati asperiores, quam sunt quibusdam tempora velit distinctio suscipit dicta ea?
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
