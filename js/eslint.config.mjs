@@ -11,7 +11,7 @@ export default defineConfig([
       "prefer-const": "error",
       "quotes": ["error", "single"],
       "no-var": "error",
-      "eqeqeq": "error"
+      eqeqeq: ["error", "always", { null: "ignore" }]
     },
   }
 ]);
