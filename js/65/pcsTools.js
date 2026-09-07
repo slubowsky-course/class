@@ -37,15 +37,15 @@ function getRandomColor() {
 }
 
 
-export default function pcsTools (selector) {
+export default function pcsTools(selector) {
 
   const element = document.querySelector(selector);
 
   return {
     /*setCss: (property, value) => setCss(element, property, value),
     getCss: (property) => getCss(element, property),*/
-    css: function(property, value) {
-      if(arguments.length < 2) {
+    css: function (property, value) {
+      if (arguments.length < 2) {
         return getCss(element, property);
       }
       setCss(element, property, value);
@@ -80,6 +80,8 @@ export default function pcsTools (selector) {
         clearInterval(interval);
         setCss(element, 'color', originalColor);
       }, duration);
+
+      return this;
     }
   };
 }
