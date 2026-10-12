@@ -1,8 +1,3 @@
-// 918efaa9a236d04bf4d351154ac73d5f
-// https://api.openweathermap.org/data/2.5/weather?zip=08701&appid=918efaa9a236d04bf4d351154ac73d5f&units=imperial&lang=he
-
-// https://openweathermap.org/img/w    .png
-
 const zipInput = document.querySelector('#zip');
 const locationElem = document.querySelector('#location');
 const iconElem = document.querySelector('#icon');
