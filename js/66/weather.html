@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+        display: grid;
+      }
+
+      #zip {
+        display: block;
+        margin-left: auto;
+      }
+
+      #icon {
+        width: 200px;
+        margin: auto;
+      }
+
+      .weather {
+        display: none;
+      }
+
+      #error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="zip" placeholder="enter zip" />
+
+    <div class="noWeather">
+      <div>please enter a zip code to see the weather in that location</div>
+      <div id="error"></div>
+    </div>
+
+    <!--div class="weather"-->
+      <div class="weather">The weather in <span id="location"></span></div>
+      <img id="icon" class="weather"/>
+      <div class="weather"><span id="temperature"></span> and <span id="description"></span></div>
+    <!--/div-->
+
+    <script src="weather.js" type="module"></script>
+  </body>
+</html>
