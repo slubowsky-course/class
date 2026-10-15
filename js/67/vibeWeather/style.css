@@ -1,0 +1,84 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  color: #fff;
+  background: linear-gradient(160deg, #4b79a1, #283e51);
+  transition: background 0.6s;
+}
+
+body.clear { background: linear-gradient(160deg, #f9a03f, #2e86de); }
+body.clouds { background: linear-gradient(160deg, #8e9eab, #3a4a5a); }
+body.rain, body.drizzle { background: linear-gradient(160deg, #4b6584, #1e272e); }
+body.thunderstorm { background: linear-gradient(160deg, #483d8b, #12121f); }
+body.snow { background: linear-gradient(160deg, #a8c0d6, #5d7a94); }
+body.night { background: linear-gradient(160deg, #1b2735, #090a0f); }
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+h1 { margin-top: 0; }
+
+.search { display: flex; gap: 0.5rem; }
+
+.search input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.7rem 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover { background: rgba(255, 255, 255, 0.35); }
+
+.units { margin: 1rem 0; display: flex; justify-content: center; gap: 0.5rem; }
+.units button.active { background: #fff; color: #283e51; }
+
+.error { background: rgba(200, 40, 40, 0.8); padding: 0.7rem; border-radius: 8px; }
+.loading { opacity: 0.8; }
+
+.current, #forecastSection > .forecast .day {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+}
+
+.current { padding: 1.5rem; margin-bottom: 1.5rem; }
+.current h2 { margin: 0; }
+.now { display: flex; justify-content: center; align-items: center; }
+.now img { width: 100px; height: 100px; }
+.temp { font-size: 4.5rem; font-weight: 300; }
+.description { text-transform: capitalize; font-size: 1.2rem; margin: 0; }
+
+.details {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  opacity: 0.9;
+}
+
+.forecast { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 0.75rem; }
+.day { padding: 0.8rem 0.4rem; }
+.day img { width: 56px; height: 56px; }
+.day .name { font-weight: 600; }
+.day .range { opacity: 0.9; }

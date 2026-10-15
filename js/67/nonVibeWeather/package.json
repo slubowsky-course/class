@@ -1,0 +1,8 @@
+{
+  "name": "non-vibe-weather",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}

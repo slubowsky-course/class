@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://api.openweathermap.org; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <title>Weather</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="app-title">Weather</h1>
+    <div id="search-root"></div>
+    <div id="settings-root"></div>
+  </header>
+
+  <main id="main">
+    <div id="status-root" role="status" aria-live="polite"></div>
+    <section id="current-root" aria-label="Current conditions"></section>
+    <section id="forecast-root" aria-label="Hourly forecast"></section>
+    <section id="daily-root" aria-label="Daily forecast"></section>
+  </main>
+
+  <footer class="app-footer">
+    <p id="attribution-root"></p>
+  </footer>
+
+  <noscript>This app needs JavaScript to run.</noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+dialog {
+  max-width: min(32rem, calc(100vw - 2 * var(--gutter)));
+  padding: var(--gutter);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+}
+
+dialog::backdrop { background: rgb(0 0 0 / 0.5); }
+
+.dialog-form { display: grid; gap: 12px; }
+.dialog-form h2 { margin: 0; font-size: 1.125rem; }
+.dialog-form p { margin: 0; }
+.dialog-form input[type="password"],
+.dialog-form input[type="text"] { width: 100%; padding: 0 12px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); }
+
+.inline-label { display: flex; align-items: center; gap: 8px; }
+.inline-label input { width: 20px; height: 20px; min-height: 0; }
+
+.dialog-message { min-height: 1.5em; color: var(--text-muted); }
+
+.dialog-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.dialog-actions button { padding: 0 16px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); cursor: pointer; }
+.dialog-actions button[type="submit"] { border-color: var(--accent); background: var(--accent); color: #fff; }
+.dialog-actions button:disabled { opacity: 0.6; cursor: default; }
+
+.settings-button { padding: 0 16px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); cursor: pointer; }
