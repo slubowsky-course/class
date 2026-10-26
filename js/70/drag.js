@@ -15,6 +15,8 @@ let offset;
   });
 }*/
 
+// added after class - save draggee
+let draggee = null;
 
 window.addEventListener('mousedown', e => {
   if(e.target.classList.contains('box')) {
@@ -26,6 +28,9 @@ window.addEventListener('mousedown', e => {
     window.addEventListener('mousemove', handleMouseMove);
 
     window.addEventListener('mouseup', handleMouseUp);
+
+    // added after class, save draggee
+    draggee = e.target;
   }
 });
 
@@ -33,8 +38,12 @@ window.addEventListener('mousedown', e => {
 function handleMouseMove(e) {
   console.log('mouse move', e);
 
-  e.target.style.top = `${e.clientY - offset.y}px`;
-  e.target.style.left = `${e.clientX - offset.x}px`;
+  /*e.target.style.top = `${e.clientY - offset.y}px`;
+  e.target.style.left = `${e.clientX - offset.x}px`;*/
+
+  // added after class, use save draggee not e.target. Can get mixed up when mouse crosses other boxes. Mentioned this approach in class but we already had e.target in place from step before.
+  draggee.style.top = `${e.clientY - offset.y}px`;
+  draggee.style.left = `${e.clientX - offset.x}px`;
 }
 
 function handleMouseUp(e) {
