@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html, body, #sidebar, #main {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+      }
+
+      #sidebar {
+        background-color: azure;
+      }
+
+      #main {
+        background-image: url("media/background1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .part {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <aside id="sidebar">
+      <img src="media/1.png" class="xpart">
+      <img src="media/2.png">
+      <img src="media/3.png">
+      <img src="media/4.png">
+      <img src="media/5.png">
+      <img src="media/6.png">
+      <img src="media/7.png">
+      <img src="media/8.png">
+      <img src="media/9.png">
+      <img src="media/10.png">
+      <img src="media/11.png">
+      <img src="media/12.png">
+      <img src="media/13.png">
+      <img src="media/14.png">
+      <img src="media/15.png">
+      <img src="media/16.png">
+      <img src="media/17.png">
+      <img src="media/18.png">
+      <img src="media/19.png">
+      <img src="media/20.png">
+      <img src="media/21.png">
+      <img src="media/22.png">
+      <img src="media/23.png" class="potato">
+    </aside>
+    <main id="main">
+      <audio src="media/music1.mp3" xautoplay loop controls></audio>
+    </main>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
