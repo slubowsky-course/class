@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        margin: 0;
+      }
+      #theCanvas {
+        display: block;
+      }
+
+      #addAntForm {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="addAntForm">
+      <label>color: <input type="color" id="color" /></label>
+      <label>count: <input type="number" id="count" min="1" max="10000" required value="1000" /></label>
+      <button>add</button>
+    </form>
+    <canvas id="theCanvas"></canvas>
+
+    <script src="ants.js" type="module"></script>
+  </body>
+</html>
