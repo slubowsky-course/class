@@ -32,7 +32,7 @@ snakeHead.onload = () => {
         break;
       case 'ArrowLeft':
         x -= SNAKE_SIZE;
-        break
+        break;
       case 'ArrowRight':
         x += SNAKE_SIZE;
         break;
