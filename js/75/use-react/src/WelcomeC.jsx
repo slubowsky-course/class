@@ -25,7 +25,7 @@ export default class WelcomeC extends Component {
       });
     }, 1000);
 
-    this.interval = setInterval(() => {
+    this.interval2 = setInterval(() => {
       this.setState({
         foo: this.state.foo - 1
       });
@@ -34,6 +34,7 @@ export default class WelcomeC extends Component {
 
   componentWillUnmount() {
     clearInterval(this.interval);
+    clearInterval(this.interval2);
   }
 
   render() {
